@@ -15,7 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,25 +26,17 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Rizwan
-  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page">
 
+  <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
         <img src="assets/img/logo.png" alt="">
-        <h1 class="sitename">Rizwan</h1>
+        <h1 class="sitename ms-2">Rizwan</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -58,7 +50,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <div class="header-social-links">
+      <div class="header-social-links d-none d-md-flex">
         <a href="https://twitter.com" class="twitter"><i class="bi bi-twitter-x"></i></a>
         <a href="https://facebook.com" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="https://instagram.com" class="instagram"><i class="bi bi-instagram"></i></a>
@@ -67,41 +59,42 @@
 
     </div>
   </header>
+  <!-- End Header -->
 
   <main class="main">
 
-    <!-- Hero Section -->
+    <!-- ======= Hero Section ======= -->
     <section id="hero" class="hero section">
 
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+      <img src="assets/img/hero-bg.jpg" alt="" class="img-fluid w-100" data-aos="fade-in">
 
       <div class="container text-center" data-aos="zoom-out" data-aos-delay="100">
         <div class="row justify-content-center">
           <div class="col-lg-8">
-            <h2>Rizwan Arshad</h2>
-            <p> 
-              <div style="font-size: large;">
-                <div>I'm a Software Engineering student</div>
-                <div>passionate about web & mobile app development,</div>
-                <div>always eager to turn ideas into functional solutions.</div>
-              </div>
-            </p>
-            <a href="about.html" class="btn-get-started">About Me</a>
+            <h2 class="mt-4">Rizwan Arshad</h2>
+            <div class="fs-5 fs-md-4 fs-lg-3 mb-3">
+              <div>I'm a Software Engineering student</div>
+              <div>passionate about web & mobile app development,</div>
+              <div>always eager to turn ideas into functional solutions.</div>
+            </div>
+            <a href="about.html" class="btn btn-primary btn-get-started">About Me</a>
           </div>
         </div>
       </div>
 
-    </section><!-- /Hero Section -->
+    </section>
+    <!-- End Hero Section -->
 
   </main>
 
-  <footer id="footer" class="footer light-background">
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer light-background py-4">
 
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Rizwan</strong> <span>All Rights Reserved<br></span></p>
+    <div class="container text-center">
+      <div class="copyright mb-3">
+        <p>© <strong class="sitename">Rizwan</strong> - All Rights Reserved</p>
       </div>
-       <div class="header-social-links">
+      <div class="header-social-links d-flex flex-column flex-sm-row justify-content-center gap-2">
         <a href="https://twitter.com" class="twitter"><i class="bi bi-twitter-x"></i></a>
         <a href="https://facebook.com" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="https://instagram.com" class="instagram"><i class="bi bi-instagram"></i></a>
@@ -110,6 +103,7 @@
     </div>
 
   </footer>
+  <!-- End Footer -->
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
