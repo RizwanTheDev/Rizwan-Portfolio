@@ -71,9 +71,10 @@ h1, h2, h3, h4, h5, h6 {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 5%;
   width: 100%;
   position: relative;
+  box-sizing: border-box;
 }
 
 @media (min-width: 1024px) {
@@ -84,14 +85,14 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .container {
-    padding: 0 1.5rem;
+    padding: 0 4%;
     max-width: 100%;
   }
 }
 
 @media (max-width: 767px) {
   .container {
-    padding: 0 1rem;
+    padding: 0 4%;
     margin: 0 auto;
     width: 100%;
     max-width: 100%;
@@ -164,7 +165,7 @@ h1, h2, h3, h4, h5, h6 {
 .navmenu ul {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: clamp(1rem, 3vw, 2rem);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -201,7 +202,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-social-links {
   display: flex;
-  gap: 1rem;
+  gap: clamp(0.5rem, 2vw, 1rem);
   align-items: center;
 }
 
@@ -265,6 +266,8 @@ h1, h2, h3, h4, h5, h6 {
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 1000;
+    width: 100vw;
+    box-sizing: border-box;
   }
 
   .navmenu ul.active {
@@ -275,16 +278,28 @@ h1, h2, h3, h4, h5, h6 {
   
   .navmenu ul li {
     margin: 0.5rem 0;
+    width: 100%;
   }
   
   .navmenu ul li a {
     font-size: 1.1rem;
     padding: 0.75rem 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .mobile-nav-toggle {
     display: flex;
     z-index: 1001;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
   }
 
   .header-social-links {
@@ -467,24 +482,28 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero .cta-buttons {
   display: flex;
-  gap: 1rem;
+  gap: clamp(0.75rem, 3vw, 1.5rem);
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 2rem;
+  width: 100%;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  padding: 0.75rem 2rem;
+  padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
   border-radius: var(--border-radius);
   font-weight: 600;
   text-decoration: none;
   transition: var(--transition-normal);
   border: none;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  min-height: 48px;
+  box-sizing: border-box;
 }
 
 .btn-primary {
@@ -650,7 +669,6 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .hero .container {
-    padding: 0 1.5rem;
     width: 100%;
     max-width: 100%;
     display: flex;
@@ -691,7 +709,7 @@ h1, h2, h3, h4, h5, h6 {
   
   .btn {
     width: 100%;
-    max-width: 280px;
+    max-width: min(280px, 90vw);
     justify-content: center;
     padding: 1rem 1.5rem;
     font-size: 1rem;
@@ -707,7 +725,6 @@ h1, h2, h3, h4, h5, h6 {
   .section-title {
     text-align: center;
     margin-bottom: 2rem;
-    padding: 0 1rem;
     width: 100%;
   }
   
@@ -730,7 +747,6 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin: 0;
-    padding: 0 1rem;
     width: 100%;
   }
   
@@ -741,7 +757,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .stats-item span {
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
   }
   
   .card {
@@ -753,7 +769,6 @@ h1, h2, h3, h4, h5, h6 {
   
   .skills {
     width: 100%;
-    padding: 0 1rem;
   }
   
   .skills .progress {
@@ -767,12 +782,11 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: 1rem;
     width: 100%;
-    padding: 0 1rem;
   }
   
   .d-flex.justify-content-center.gap-2 .btn {
     width: 100%;
-    max-width: 280px;
+    max-width: min(280px, 90vw);
   }
   
   .text-center {
@@ -1017,9 +1031,10 @@ main {
 /* Stats */
 .stats .row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: clamp(1rem, 3vw, 2rem);
   margin-top: 3rem;
+  width: 100%;
 }
 
 .stats-item {
@@ -1646,7 +1661,7 @@ main {
   }
   
   .container {
-    padding: 0 0.75rem;
+    padding: 0 4%;
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
@@ -1659,7 +1674,6 @@ main {
   }
   
   .hero .container {
-    padding: 0 0.75rem;
     text-align: center;
   }
   
@@ -1688,7 +1702,7 @@ main {
     padding: 0.9rem 1.2rem;
     font-size: 0.9rem;
     width: 100%;
-    max-width: 240px;
+    max-width: min(240px, 85vw);
     min-height: 44px;
     border-radius: 8px;
   }
@@ -1699,8 +1713,8 @@ main {
   }
   
   .stats .row {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 0.75rem;
     padding: 0;
     margin: 0;
@@ -1708,17 +1722,16 @@ main {
   }
   
   .stats-item {
-    padding: 1rem 0.75rem;
+    padding: 1rem;
     width: 100%;
     margin: 0;
   }
   
   .stats-item span {
-    font-size: 1.8rem;
+    font-size: clamp(1.6rem, 5vw, 1.8rem);
   }
   
   .section-title {
-    padding: 0 0.75rem;
     margin-bottom: 1.5rem;
   }
   
@@ -1755,23 +1768,18 @@ main {
   
   .d-flex.justify-content-center.gap-2 {
     width: 100%;
-    padding: 0 0.75rem;
     gap: 0.75rem;
   }
   
   .d-flex.justify-content-center.gap-2 .btn {
-    max-width: 240px;
+    max-width: min(240px, 85vw);
   }
 }
 
 /* Extra small devices (iPod Touch, small phones) */
 @media (max-width: 360px) {
   .container {
-    padding: 0 0.5rem;
-  }
-  
-  .hero .container {
-    padding: 0 0.5rem;
+    padding: 0 3%;
   }
   
   .hero h2 {
@@ -1785,15 +1793,15 @@ main {
   .btn {
     padding: 0.8rem 1rem;
     font-size: 0.85rem;
-    max-width: 220px;
+    max-width: min(220px, 80vw);
   }
   
   .stats-item {
-    padding: 0.8rem 0.5rem;
+    padding: 0.8rem;
   }
   
   .stats-item span {
-    font-size: 1.6rem;
+    font-size: clamp(1.4rem, 5vw, 1.6rem);
   }
   
   .section-title h2 {
@@ -1841,36 +1849,42 @@ main {
   flex-wrap: wrap;
   margin: 0 -0.5rem;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .col {
   flex: 1;
   padding: 0 0.5rem;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .col-md-6 {
   flex: 0 0 50%;
   max-width: 50%;
   padding: 0 0.5rem;
+  box-sizing: border-box;
 }
 
 .col-lg-4 {
   flex: 0 0 33.333333%;
   max-width: 33.333333%;
   padding: 0 0.5rem;
+  box-sizing: border-box;
 }
 
 .col-lg-6 {
   flex: 0 0 50%;
   max-width: 50%;
   padding: 0 0.5rem;
+  box-sizing: border-box;
 }
 
 .col-lg-8 {
   flex: 0 0 66.666667%;
   max-width: 66.666667%;
   padding: 0 0.5rem;
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
@@ -1888,6 +1902,7 @@ main {
     max-width: 100%;
     padding: 0;
     margin-bottom: 1rem;
+    box-sizing: border-box;
   }
 }
 
