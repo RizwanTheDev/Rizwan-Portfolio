@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Contact - RizwanPortfolio</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Rizwan Arshad</title>
+  <meta name="description" content="Get in touch with Rizwan Arshad for web development, mobile app development, and UI/UX design services">
+  <meta name="keywords" content="contact rizwan arshad, hire web developer, flutter developer contact">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
+  <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body class="contact-page">
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="spinner"></div>
+      <div class="preloader-text">Loading...</div>
+    </div>
+  </div>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center light-background sticky-top">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <h1 class="sitename">Rizwan</h1>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        Rizwan
       </a>
 
-      <nav id="navmenu" class="navmenu">
+      <nav class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -46,138 +48,308 @@
           <li><a href="services.html">Services</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <div class="header-social-links d-none d-md-flex">
-        <a href="https://twitter.com" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://facebook.com" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://instagram.com" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/c%D4%8B-r%CE%B9%C8%A5%C9%AF%CE%B1%C9%B3-a%C9%BE%CA%82%D4%8B%CE%B1%D4%83-0a024a366/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <div class="header-social-links">
+        <a href="https://twitter.com" class="twitter" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://facebook.com" class="facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://instagram.com" class="instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/c%D4%8B-r%CE%B9%C8%A5%C9%AF%CE%B1%C9%B3-a%C9%BE%CA%82%D4%8B%CE%B1%D4%83-0a024a366/" class="linkedin" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
 
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
-  <!-- End Header -->
 
-  <main class="main">
+  <main>
+    <!-- Contact Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact Me</h2>
+          <p>Let's discuss your project and bring your ideas to life</p>
+        </div>
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact section pt-5">
-
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>I'm always excited to connect with creative minds and passionate developers. Let’s talk!</p>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-
+        <div class="row">
+          <!-- Contact Info -->
           <div class="col-lg-5">
-            <div class="info-wrap p-3 bg-light rounded shadow-sm">
-              <div class="info-item d-flex mb-4" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0 me-3 fs-4 text-primary"></i>
-                <div>
-                  <h5>Address</h5>
-                  <p>Phool Nagar, Tehsil Pattoki, District Kasur</p>
+            <div class="card">
+              <h3 class="mb-4">Get In Touch</h3>
+              <p class="mb-4">I'm always excited to work on new projects and collaborate with amazing people. Whether you have a question, want to discuss a project, or just want to say hello, feel free to reach out!</p>
+              
+              <div class="contact-info">
+                <div class="d-flex align-items-center mb-3">
+                  <div style="width: 50px; height: 50px; background: var(--gradient-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem;">
+                    <i class="bi bi-geo-alt" style="color: white; font-size: 1.2rem;"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">Location</h5>
+                    <p class="mb-0">Lahore, Pakistan</p>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center mb-3">
+                  <div style="width: 50px; height: 50px; background: var(--gradient-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem;">
+                    <i class="bi bi-envelope" style="color: white; font-size: 1.2rem;"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">Email</h5>
+                    <p class="mb-0"><a href="mailto:devrizwan.se@gmail.com" style="color: var(--primary-color);">devrizwan.se@gmail.com</a></p>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center mb-3">
+                  <div style="width: 50px; height: 50px; background: var(--gradient-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem;">
+                    <i class="bi bi-phone" style="color: white; font-size: 1.2rem;"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">Phone</h5>
+                    <p class="mb-0"><a href="tel:+923455933107" style="color: var(--primary-color);">+92 345 5933107</a></p>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center mb-4">
+                  <div style="width: 50px; height: 50px; background: var(--gradient-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem;">
+                    <i class="bi bi-clock" style="color: white; font-size: 1.2rem;"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">Availability</h5>
+                    <p class="mb-0">Mon - Fri: 9:00 AM - 6:00 PM</p>
+                  </div>
                 </div>
               </div>
 
-              <div class="info-item d-flex mb-4" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0 me-3 fs-4 text-primary"></i>
-                <div>
-                  <h5>Call Us</h5>
-                  <p>+92 345 5933107</p>
+              <div class="social-links-contact">
+                <h5 class="mb-3">Follow Me</h5>
+                <div class="d-flex gap-2" style="flex-wrap: wrap;">
+                  <a href="https://www.linkedin.com/in/c%D4%8B-r%CE%B9%C8%A5%C9%AF%CE%B1%C9%B3-a%C9%BE%CA%82%D4%8B%CE%B1%D4%83-0a024a366/" class="btn btn-primary" target="_blank" style="display: flex; align-items: center; gap: 0.5rem; opacity: 1; visibility: visible;">
+                    <i class="bi bi-linkedin"></i>
+                    LinkedIn
+                  </a>
+                  <a href="https://github.com" class="btn btn-primary" target="_blank" style="display: flex; align-items: center; gap: 0.5rem; opacity: 1; visibility: visible;">
+                    <i class="bi bi-github"></i>
+                    GitHub
+                  </a>
                 </div>
-              </div>
-
-              <div class="info-item d-flex mb-4" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0 me-3 fs-4 text-primary"></i>
-                <div>
-                  <h5>Email Us</h5>
-                  <p>devrizwan.se@gmail.com</p>
-                </div>
-              </div>
-
-              <div class="ratio ratio-16x9 mt-3">
-                <iframe src="https://www.google.com/maps/embed?pb=..." style="border:0;" allowfullscreen="" loading="lazy"></iframe>
               </div>
             </div>
           </div>
 
+          <!-- Contact Form -->
           <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form p-4 bg-light rounded shadow-sm" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-3">
-                <div class="col-md-6">
-                  <label for="name-field">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name-field" required>
+            <div class="card">
+              <h3 class="mb-4">Send Me a Message</h3>
+              <form id="contact-form" class="contact-form">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="name" class="form-label">Your Name *</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="email" class="form-label">Your Email *</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                  </div>
                 </div>
-                <div class="col-md-6">
-                  <label for="email-field">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required>
+                <div class="mb-3">
+                  <label for="subject" class="form-label">Subject *</label>
+                  <input type="text" id="subject" name="subject" class="form-control" required>
                 </div>
-                <div class="col-md-12">
-                  <label for="subject-field">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required>
+                <div class="mb-3">
+                  <label for="service" class="form-label">Service Interested In</label>
+                  <select id="service" name="service" class="form-control">
+                    <option value="">Select a service (optional)</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="mobile-app">Mobile App Development</option>
+                    <option value="ui-ux-design">UI/UX Design</option>
+                    <option value="ecommerce">E-commerce Solutions</option>
+                    <option value="maintenance">Website Maintenance</option>
+                    <option value="consultation">Technical Consultation</option>
+                  </select>
                 </div>
-                <div class="col-md-12">
-                  <label for="message-field">Message</label>
-                  <textarea class="form-control" name="message" rows="6" id="message-field" required></textarea>
+                <div class="mb-4">
+                  <label for="message" class="form-label">Your Message *</label>
+                  <textarea id="message" name="message" rows="6" class="form-control" required placeholder="Tell me about your project, timeline, budget, or any questions you have..."></textarea>
                 </div>
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                  <button type="submit" class="btn btn-primary mt-2">Send Message</button>
-                </div>
-              </div>
-            </form>
+                <button type="submit" class="btn btn-primary">
+                  <i class="bi bi-send"></i>
+                  Send Message
+                </button>
+              </form>
+            </div>
           </div>
-
         </div>
       </div>
-
     </section>
-    <!-- End Contact Section -->
 
+    <!-- FAQ Section -->
+    <section class="section light-background">
+      <div class="container">
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+          <p>Common questions about my services and process</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="faq-container">
+              <div class="faq-item">
+                <div class="card">
+                  <h4>What is your typical project timeline?</h4>
+                  <p>Project timelines vary depending on complexity. A simple website typically takes 1-2 weeks, while complex web applications or mobile apps can take 4-8 weeks. I'll provide a detailed timeline during our initial consultation.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="card">
+                  <h4>Do you provide ongoing support after project completion?</h4>
+                  <p>Yes! I offer ongoing maintenance and support services to keep your website or app running smoothly. This includes updates, security monitoring, and technical support as needed.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="card">
+                  <h4>What technologies do you specialize in?</h4>
+                  <p>I specialize in modern web technologies (HTML5, CSS3, JavaScript), Flutter for mobile development, WordPress for CMS solutions, and MySQL for databases. I stay updated with the latest industry trends and technologies.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="card">
+                  <h4>Can you help with existing projects or only new ones?</h4>
+                  <p>I can work on both new projects and existing ones. Whether you need to add features, fix issues, redesign, or optimize performance, I'm happy to help improve your current digital solutions.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="card">
+                  <h4>What information do you need to start a project?</h4>
+                  <p>I'll need details about your project goals, target audience, preferred features, design preferences, timeline, and budget. The more information you provide, the better I can tailor the solution to your needs.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer light-background py-4">
-    <div class="container text-center">
-      <div class="copyright mb-2">
-        <p>© <strong class="sitename">Rizwan</strong> - All Rights Reserved</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="header-social-links">
+        <a href="https://twitter.com" class="twitter" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://facebook.com" class="facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://instagram.com" class="instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/c%D4%8B-r%CE%B9%C8%A5%C9%AF%CE%B1%C9%B3-a%C9%BE%CA%82%D4%8B%CE%B1%D4%83-0a024a366/" class="linkedin" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
-      <div class="header-social-links d-flex flex-column flex-sm-row justify-content-center gap-2">
-        <a href="https://twitter.com" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://facebook.com" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://instagram.com" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/c%D4%8B-r%CE%B9%C8%A5%C9%AF%CE%B1%C9%B3-a%C9%BE%CA%82%D4%8B%CE%B1%D4%83-0a024a366/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <div class="copyright">
+        <p>&copy; <strong>Rizwan Arshad</strong> - All Rights Reserved</p>
       </div>
     </div>
   </footer>
-  <!-- End Footer -->
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Scroll Top Button -->
+  <a href="#" class="scroll-top">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <!-- Scripts -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-</body>
+  <style>
+    .form-control {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius-sm);
+      font-size: 1rem;
+      transition: var(--transition-normal);
+      background: var(--bg-primary);
+    }
 
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .contact-form {
+      max-width: 100%;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+    }
+
+    .social-links-contact .btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .d-flex.gap-2 {
+        flex-direction: column;
+      }
+      
+      .social-links-contact .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+      }
+    }
+  </style>
+
+  <script>
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyudF5e8UU5b1DBtxaOe_EoI8WRN8EpBI5N-8RALK4oeNwZcyGUwy4IwYb3UJabRpB5JA/exec';
+    
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      
+      // Show sending state
+      submitBtn.innerHTML = '<i class="bi bi-send"></i> Sending...';
+      submitBtn.disabled = true;
+      
+      // Prepare form data
+      const formData = new FormData();
+      formData.append('name', this.name.value);
+      formData.append('email', this.email.value);
+      formData.append('subject', this.subject.value);
+      formData.append('service', this.service.value || 'Not specified');
+      formData.append('message', this.message.value);
+      formData.append('timestamp', new Date().toLocaleString());
+      
+      // Send to Google Sheets (fire and forget)
+      fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        body: formData
+      }).catch(() => {});
+      
+      // Show success immediately (don't wait for response)
+      setTimeout(() => {
+        submitBtn.innerHTML = '<i class="bi bi-check-circle"></i> Sent!';
+        alert(`Thank you ${this.name.value}! Your message has been received. I'll respond to you via email soon!`);
+        this.reset();
+        
+        setTimeout(() => {
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+        }, 1000);
+      }, 800);
+    });
+  </script>
+</body>
 </html>

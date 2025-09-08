@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Resume - Rizwan Portfolio</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Rizwan Arshad</title>
+  <meta name="description" content="Rizwan Arshad's professional resume - Software Engineering student with expertise in web and mobile development">
+  <meta name="keywords" content="rizwan arshad resume, software engineer cv, web developer resume">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
+  <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body class="resume-page">
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="spinner"></div>
+      <div class="preloader-text">Loading...</div>
+    </div>
+  </div>
 
   <!-- Header -->
-  <header id="header" class="header d-flex align-items-center light-background sticky-top">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <h1 class="sitename">Rizwan</h1>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        Rizwan
       </a>
 
-      <nav id="navmenu" class="navmenu">
+      <nav class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -46,128 +48,231 @@
           <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <div class="header-social-links d-none d-md-flex">
-        <a href="https://twitter.com" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://facebook.com" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://instagram.com" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/c%D4%8B-r%CE%B9%C8%A5%C9%AF%CE%B1%C9%B3-a%C9%BE%CA%82%D4%8B%CE%B1%D4%83-0a024a366/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <div class="header-social-links">
+        <a href="https://twitter.com" class="twitter" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://facebook.com" class="facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://instagram.com" class="instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/c%D4%8B-r%CE%B9%C8%A5%C9%AF%CE%B1%C9%B3-a%C9%BE%CA%82%D4%8B%CE%B1%D4%83-0a024a366/" class="linkedin" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
 
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
-  <!-- End Header -->
 
-  <main class="main">
-
+  <main>
     <!-- Resume Section -->
-    <section id="resume" class="resume section py-5">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title text-center mb-4">
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
           <h2>Resume</h2>
-          <p>Here's a quick look at my education, experience, and skills.</p>
+          <p>My professional journey, education, and experience</p>
         </div>
 
+        <!-- Download CV Button -->
         <div class="text-center mb-5">
           <a class="btn btn-primary btn-lg" href="assets/cv/Rizwan_Arshad_CV.pdf" download>
-            <i class="bi bi-download"></i> Download My CV
+            <i class="bi bi-download"></i>
+            Download My CV
           </a>
         </div>
 
-        <div class="row gy-4">
+        <div class="row">
+          <!-- Left Column -->
+          <div class="col-lg-6">
+            <!-- Summary -->
+            <div class="resume">
+              <h3 class="resume-title">Professional Summary</h3>
+              <div class="resume-item">
+                <h4>Rizwan Arshad</h4>
+                <p><em>Motivated Software Engineering student with a passion for web and mobile app development. Dedicated to applying academic knowledge to real-world solutions and eager to contribute to innovative projects that make a positive impact.</em></p>
+                <ul>
+                  <li><i class="bi bi-geo-alt"></i> Phool Nagar, Tehsil Pattoki, District Kasur, Pakistan</li>
+                  <li><i class="bi bi-phone"></i> <a href="tel:+923455933107" style="color: var(--primary-color);">+92 345 5933107</a></li>
+                  <li><i class="bi bi-envelope"></i> <a href="mailto:devrizwan.se@gmail.com" style="color: var(--primary-color);">devrizwan.se@gmail.com</a></li>
+                  <li><i class="bi bi-linkedin"></i> LinkedIn Profile Available</li>
+                </ul>
+              </div>
 
-          <!-- Left Side -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Summary</h3>
-            <div class="resume-item pb-3">
-              <h4>RIZWAN ARSHAD</h4>
-              <p><em>Motivated Software Engineering student with a passion for web and mobile app development. Dedicated to applying academic knowledge to real-world solutions and eager to contribute to innovative projects.</em></p>
-              <ul>
-                <li>Phool Nagar, Tehsil Pattoki, District Kasur</li>
-                <li>0345-5933107</li>
-                <li>devrizwan.se@gmail.com</li>
-              </ul>
-            </div>
+              <!-- Education -->
+              <h3 class="resume-title">Education</h3>
+              <div class="resume-item">
+                <h4>Bachelor of Science in Software Engineering</h4>
+                <h5>2022 – Present (Expected 2026)</h5>
+                <p><em>Superior University, Gold Campus, Lahore</em></p>
+                <ul>
+                  <li>Currently in 6th semester with strong academic performance</li>
+                  <li>Specialized coursework in Flutter development, web technologies, and database systems</li>
+                  <li>Active participation in coding competitions and tech events</li>
+                  <li>Focus on agile development methodologies and software engineering principles</li>
+                </ul>
+              </div>
 
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>B.Sc in Software Engineering</h4>
-              <h5>2022 – Present</h5>
-              <p><em>Superior University, Gold Campus, Lahore</em></p>
-              <p>Currently in 6th semester with focus on Flutter, web technologies, database systems, and agile development.</p>
-            </div>
-            <div class="resume-item">
-              <h4>F.Sc Pre-Engineering</h4>
-              <h5>2020 – 2022</h5>
-              <p><em>Punjab Group of Colleges, Pattoki Campus</em></p>
-              <p>Achieved Grade: A+</p>
+              <div class="resume-item">
+                <h4>F.Sc Pre-Engineering</h4>
+                <h5>2020 – 2022</h5>
+                <p><em>Punjab Group of Colleges, Pattoki Campus</em></p>
+                <ul>
+                  <li>Achieved Grade: A+ (Outstanding Performance)</li>
+                  <li>Strong foundation in Mathematics and Physics</li>
+                  <li>Developed analytical and problem-solving skills</li>
+                </ul>
+              </div>
+
+              <!-- Certifications -->
+              <h3 class="resume-title">Certifications & Training</h3>
+              <div class="resume-item">
+                <h4>Web Development Fundamentals</h4>
+                <h5>2023</h5>
+                <p><em>Self-paced Online Learning</em></p>
+                <ul>
+                  <li>HTML5, CSS3, and JavaScript mastery</li>
+                  <li>Responsive web design principles</li>
+                  <li>Modern CSS frameworks and libraries</li>
+                </ul>
+              </div>
+
+              <div class="resume-item">
+                <h4>Flutter Development</h4>
+                <h5>2023 - 2024</h5>
+                <p><em>Comprehensive Mobile App Development</em></p>
+                <ul>
+                  <li>Cross-platform mobile app development</li>
+                  <li>State management and API integration</li>
+                  <li>UI/UX design for mobile applications</li>
+                </ul>
+              </div>
             </div>
           </div>
 
-          <!-- Right Side -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Experience</h3>
-            <div class="resume-item">
-              <h4>Entry Level / Fresher</h4>
-              <p><strong>Currently Seeking Opportunities</strong></p>
-              <p><em>Applying academic knowledge to real-world practice</em></p>
-              <ul>
-                <li>Developed academic projects using Flutter, HTML, CSS, JS</li>
-                <li>Built portfolio and resume websites from scratch</li>
-                <li>Practiced SEO fundamentals and MySQL database integration</li>
-              </ul>
+          <!-- Right Column -->
+          <div class="col-lg-6">
+            <!-- Experience -->
+            <div class="resume">
+              <h3 class="resume-title">Professional Experience</h3>
+              <div class="resume-item">
+                <h4>Freelance Web Developer</h4>
+                <h5>2023 – Present</h5>
+                <p><em>Self-Employed</em></p>
+                <ul>
+                  <li>Developed responsive websites for local businesses and startups</li>
+                  <li>Created custom WordPress themes and plugins</li>
+                  <li>Implemented SEO best practices to improve search rankings</li>
+                  <li>Collaborated with clients to understand requirements and deliver solutions</li>
+                  <li>Maintained and updated existing websites for optimal performance</li>
+                </ul>
+              </div>
+
+              <div class="resume-item">
+                <h4>Academic Projects Lead</h4>
+                <h5>2022 – Present</h5>
+                <p><em>Superior University</em></p>
+                <ul>
+                  <li>Led multiple team projects using agile development methodologies</li>
+                  <li>Developed mobile applications using Flutter framework</li>
+                  <li>Created database-driven web applications with MySQL integration</li>
+                  <li>Mentored junior students in programming concepts and best practices</li>
+                </ul>
+              </div>
+
+              <!-- Technical Skills -->
+              <h3 class="resume-title">Technical Skills</h3>
+              <div class="resume-item">
+                <h4>Programming Languages</h4>
+                <ul>
+                  <li><strong>Web:</strong> HTML5, CSS3, JavaScript (ES6+), PHP</li>
+                  <li><strong>Mobile:</strong> Dart (Flutter), Java (Android basics)</li>
+                  <li><strong>Database:</strong> MySQL, SQLite, Firebase</li>
+                  <li><strong>Other:</strong> C++, Python (basics)</li>
+                </ul>
+              </div>
+
+              <div class="resume-item">
+                <h4>Frameworks & Tools</h4>
+                <ul>
+                  <li><strong>Frontend:</strong> Bootstrap, Tailwind CSS, jQuery</li>
+                  <li><strong>Mobile:</strong> Flutter, Android Studio</li>
+                  <li><strong>CMS:</strong> WordPress, Custom Theme Development</li>
+                  <li><strong>Version Control:</strong> Git, GitHub</li>
+                  <li><strong>Design:</strong> Figma, Adobe XD (basics)</li>
+                </ul>
+              </div>
+
+              <!-- Soft Skills -->
+              <h3 class="resume-title">Core Competencies</h3>
+              <div class="resume-item">
+                <ul>
+                  <li>Problem-solving and analytical thinking</li>
+                  <li>Team collaboration and leadership</li>
+                  <li>Effective communication and presentation skills</li>
+                  <li>Time management and project planning</li>
+                  <li>Continuous learning and adaptability</li>
+                  <li>Attention to detail and quality assurance</li>
+                  <li>Client relationship management</li>
+                </ul>
+              </div>
+
+              <!-- Languages -->
+              <h3 class="resume-title">Languages</h3>
+              <div class="resume-item">
+                <ul>
+                  <li><strong>Urdu:</strong> Native</li>
+                  <li><strong>English:</strong> Fluent (Professional working proficiency)</li>
+                  <li><strong>Punjabi:</strong> Conversational</li>
+                </ul>
+              </div>
             </div>
           </div>
-
         </div>
 
+        <!-- Call to Action -->
+        <div class="text-center mt-5">
+          <div class="card" style="max-width: 600px; margin: 0 auto;">
+            <h3>Ready to Work Together?</h3>
+            <p>I'm always open to discussing new opportunities and exciting projects. Let's connect and see how we can collaborate!</p>
+            <div class="d-flex justify-content-center gap-2">
+              <a href="contact.html" class="btn btn-primary">
+                <i class="bi bi-envelope"></i>
+                Contact Me
+              </a>
+              <a href="https://www.linkedin.com/in/c%D4%8B-r%CE%B9%C8%A5%C9%AF%CE%B1%C9%B3-a%C9%BE%CA%82%D4%8B%CE%B1%D4%83-0a024a366/" class="btn btn-primary" target="_blank">
+                <i class="bi bi-linkedin"></i>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <!-- End Resume Section -->
-
   </main>
 
   <!-- Footer -->
-  <footer id="footer" class="footer light-background py-4">
-    <div class="container text-center">
-      <div class="copyright mb-2">
-        <p>© <strong class="sitename">Rizwan</strong> - All Rights Reserved</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="header-social-links">
+        <a href="https://twitter.com" class="twitter" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://facebook.com" class="facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://instagram.com" class="instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/c%D4%8B-r%CE%B9%C8%A5%C9%AF%CE%B1%C9%B3-a%C9%BE%CA%82%D4%8B%CE%B1%D4%83-0a024a366/" class="linkedin" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
-      <div class="header-social-links d-flex flex-column flex-sm-row justify-content-center gap-2">
-        <a href="https://twitter.com" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://facebook.com" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://instagram.com" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/c%D4%8B-r%CE%B9%C8%A5%C9%AF%CE%B1%C9%B3-a%C9%BE%CA%82%D4%8B%CE%B1%D4%83-0a024a366/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <div class="copyright">
+        <p>&copy; <strong>Rizwan Arshad</strong> - All Rights Reserved</p>
       </div>
     </div>
   </footer>
-  <!-- End Footer -->
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+  <!-- Scroll Top Button -->
+  <a href="#" class="scroll-top">
     <i class="bi bi-arrow-up-short"></i>
   </a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <!-- Scripts -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>

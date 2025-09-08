@@ -1,0 +1,56 @@
+<!-- Alternative: Google Forms Integration -->
+<!-- 
+1. Create a Google Form with fields: Name, Email, Subject, Service, Message
+2. Get the form's action URL from "Send" > "Link" 
+3. Replace the form action below with your Google Form URL
+4. Update field names to match your Google Form field names
+-->
+
+<form action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" method="POST" target="hidden_iframe">
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="name" class="form-label">Your Name *</label>
+      <input type="text" name="entry.YOUR_NAME_FIELD_ID" class="form-control" required>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="email" class="form-label">Your Email *</label>
+      <input type="email" name="entry.YOUR_EMAIL_FIELD_ID" class="form-control" required>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="subject" class="form-label">Subject *</label>
+    <input type="text" name="entry.YOUR_SUBJECT_FIELD_ID" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label for="service" class="form-label">Service Interested In</label>
+    <select name="entry.YOUR_SERVICE_FIELD_ID" class="form-control">
+      <option value="">Select a service (optional)</option>
+      <option value="web-development">Web Development</option>
+      <option value="mobile-app">Mobile App Development</option>
+      <option value="ui-ux-design">UI/UX Design</option>
+      <option value="ecommerce">E-commerce Solutions</option>
+      <option value="maintenance">Website Maintenance</option>
+      <option value="consultation">Technical Consultation</option>
+    </select>
+  </div>
+  <div class="mb-4">
+    <label for="message" class="form-label">Your Message *</label>
+    <textarea name="entry.YOUR_MESSAGE_FIELD_ID" rows="6" class="form-control" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">
+    <i class="bi bi-send"></i>
+    Send Message
+  </button>
+</form>
+
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+<script>
+// Show success message after form submission
+window.addEventListener('message', function(e) {
+  if (e.data === 'form-submitted') {
+    alert('Thank you! Your message has been sent successfully.');
+    document.querySelector('form').reset();
+  }
+});
+</script>

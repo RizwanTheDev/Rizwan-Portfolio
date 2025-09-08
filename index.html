@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - RizwanPortfolio</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rizwan Arshad - Software Engineer & Developer</title>
+  <meta name="description" content="Software Engineering student passionate about web & mobile app development. Specializing in Flutter, HTML, CSS, JavaScript, and modern web technologies.">
+  <meta name="keywords" content="software engineer, web developer, flutter developer, portfolio, rizwan arshad">
+  
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
+  
+  <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body class="index-page">
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="spinner"></div>
+      <div class="preloader-text">Loading...</div>
+    </div>
+  </div>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center light-background sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="assets/img/logo.png" alt="">
-        <h1 class="sitename ms-2">Rizwan</h1>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        Rizwan
       </a>
 
-      <nav id="navmenu" class="navmenu">
+      <nav class="navmenu">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -47,84 +48,191 @@
           <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <div class="header-social-links d-none d-md-flex">
-        <a href="https://twitter.com" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://facebook.com" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://instagram.com" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/c%D4%8B-r%CE%B9%C8%A5%C9%AF%CE%B1%C9%B3-a%C9%BE%CA%82%D4%8B%CE%B1%D4%83-0a024a366/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <div class="header-social-links">
+        <a href="https://twitter.com" class="twitter" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://facebook.com" class="facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://instagram.com" class="instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/c%D4%8B-r%CE%B9%C8%A5%C9%AF%CE%B1%C9%B3-a%C9%BE%CA%82%D4%8B%CE%B1%D4%83-0a024a366/" class="linkedin" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
 
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
-  <!-- End Header -->
 
-  <main class="main">
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+    <div class="floating-elements">
+      <div class="floating-particle"></div>
+      <div class="floating-particle"></div>
+      <div class="floating-particle"></div>
+      <div class="floating-particle"></div>
+    </div>
+    
+    <div class="container">
+      <h2>Rizwan Arshad</h2>
+      <div class="subtitle">
+        <p>Software Engineering student passionate about web & mobile app development,</p>
+        <p>always eager to turn ideas into functional solutions.</p>
+      </div>
+      
+      <div class="cta-buttons">
+        <a href="about.html" class="btn btn-primary">
+          <i class="bi bi-person"></i>
+          About Me
+        </a>
+        <a href="assets/cv/Rizwan_Arshad_CV.pdf" class="btn btn-outline" download>
+          <i class="bi bi-download"></i>
+          Download CV
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="hero section">
+  <!-- Quick Stats Section -->
+  <section class="section light-background">
+    <div class="container">
+      <div class="stats">
+        <div class="row">
+          <div class="stats-item">
+            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="2">0</span>
+            <p>Projects Completed</p>
+          </div>
+          <div class="stats-item">
+            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="2">0</span>
+            <p>Happy Clients</p>
+          </div>
+          <div class="stats-item">
+            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="200" data-purecounter-duration="2">0</span>
+            <p>Hours of Coding</p>
+          </div>
+          <div class="stats-item">
+            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="2">0</span>
+            <p>Technologies</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <img src="assets/img/hero-bg.jpg" alt="" class="img-fluid w-100" data-aos="fade-in">
+  <!-- Skills Preview Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Core Skills</h2>
+        <p>Technologies and tools I work with to bring ideas to life</p>
+      </div>
 
-      <div class="container text-center" data-aos="zoom-out" data-aos-delay="100">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <h2 class="mt-4">Rizwan Arshad</h2>
-            <div class="fs-5 fs-md-4 fs-lg-3 mb-3">
-              <div>I'm a Software Engineering student</div>
-              <div>passionate about web & mobile app development,</div>
-              <div>always eager to turn ideas into functional solutions.</div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="skills">
+            <div class="progress">
+              <span class="skill">HTML/CSS <i class="val">95%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" style="width: 95%" aria-valuenow="95"></div>
+              </div>
             </div>
-            <a href="about.html" class="btn btn-primary btn-get-started">About Me</a>
+
+            <div class="progress">
+              <span class="skill">JavaScript <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" style="width: 80%" aria-valuenow="80"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Flutter <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" style="width: 85%" aria-valuenow="85"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="skills">
+            <div class="progress">
+              <span class="skill">MySQL <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" style="width: 90%" aria-valuenow="90"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">WordPress <i class="val">88%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" style="width: 88%" aria-valuenow="88"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">SEO <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" style="width: 75%" aria-valuenow="75"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-    </section>
-    <!-- End Hero Section -->
-
-  </main>
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer light-background py-4">
-
-    <div class="container text-center">
-      <div class="copyright mb-3">
-        <p>© <strong class="sitename">Rizwan</strong> - All Rights Reserved</p>
-      </div>
-      <div class="header-social-links d-flex flex-column flex-sm-row justify-content-center gap-2">
-        <a href="https://twitter.com" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://facebook.com" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://instagram.com" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/c%D4%8B-r%CE%B9%C8%A5%C9%AF%CE%B1%C9%B3-a%C9%BE%CA%82%D4%8B%CE%B1%D4%83-0a024a366/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <div class="text-center mt-4">
+        <a href="about.html" class="btn btn-primary">
+          View All Skills
+          <i class="bi bi-arrow-right"></i>
+        </a>
       </div>
     </div>
+  </section>
 
+  <!-- CTA Section -->
+  <section class="section light-background">
+    <div class="container text-center">
+      <div>
+        <h2>Ready to Start Your Project?</h2>
+        <p class="mb-4">Let's work together to bring your ideas to life with modern, responsive solutions.</p>
+        <div class="d-flex justify-content-center gap-2">
+          <a href="contact.html" class="btn btn-primary">
+            <i class="bi bi-envelope"></i>
+            Get In Touch
+          </a>
+          <a href="services.html" class="btn btn-primary">
+            <i class="bi bi-gear"></i>
+            View Services
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="header-social-links">
+        <a href="https://twitter.com" class="twitter" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://facebook.com" class="facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://instagram.com" class="instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/c%D4%8B-r%CE%B9%C8%A5%C9%AF%CE%B1%C9%B3-a%C9%BE%CA%82%D4%8B%CE%B1%D4%83-0a024a366/" class="linkedin" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+        <p>&copy; <strong>Rizwan Arshad</strong> - All Rights Reserved</p>
+      </div>
+    </div>
   </footer>
-  <!-- End Footer -->
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Scroll Top Button -->
+  <a href="#" class="scroll-top">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <!-- Scripts -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>
