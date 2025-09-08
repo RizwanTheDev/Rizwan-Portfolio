@@ -152,27 +152,30 @@
     }
   }
 
-  // Scroll-based animations
+  // Optimized scroll-based animations
+  let ticking = false;
   function scrollAnimations() {
-    const scrolled = window.pageYOffset;
-    const windowHeight = window.innerHeight;
-    
-    // Animate elements based on scroll position
-    document.querySelectorAll('.card, .stats-item').forEach((element, index) => {
-      const elementTop = element.getBoundingClientRect().top;
-      const elementVisible = 150;
-      
-      if (elementTop < windowHeight - elementVisible) {
-        element.style.transform = 'translateY(0)';
-        element.style.opacity = '1';
-      }
-    });
-    
-    // Header background opacity
-    const header = document.querySelector('.header');
-    if (header) {
-      const opacity = Math.min(scrolled / 100, 0.98);
-      header.style.background = `rgba(255, 255, 255, ${opacity})`;
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const scrolled = window.pageYOffset;
+        const windowHeight = window.innerHeight;
+        
+        // Animate elements based on scroll position
+        document.querySelectorAll('.card, .stats-item').forEach((element) => {
+          const elementTop = element.getBoundingClientRect().top;
+          const elementVisible = 100;
+          
+          if (elementTop < windowHeight - elementVisible) {
+            element.style.transform = 'translateY(0)';
+            element.style.opacity = '1';
+          }
+        });
+        
+
+        
+        ticking = false;
+      });
+      ticking = true;
     }
   }
 
@@ -215,14 +218,14 @@
 
   // Initialize everything when DOM is loaded
   function init() {
-    // Remove preloader
+    // Remove preloader faster
     if (preloader) {
       setTimeout(() => {
         preloader.style.opacity = '0';
         setTimeout(() => {
           preloader.remove();
-        }, 300);
-      }, 1000);
+        }, 200);
+      }, 500);
     }
 
     // Initialize PureCounter
@@ -230,15 +233,19 @@
       new PureCounter();
     }
 
-    // Add event listeners
+    // Optimized scroll event listener
+    let scrollTimeout;
     window.addEventListener('scroll', () => {
-      handleScroll();
-      animateOnScroll();
-      animateSkills();
-      animateCounters();
-      parallaxEffect();
-      scrollAnimations();
-    });
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+      scrollTimeout = setTimeout(() => {
+        handleScroll();
+        animateSkills();
+        animateCounters();
+        scrollAnimations();
+      }, 10);
+    }, { passive: true });
 
     mobileToggle?.addEventListener('click', toggleMobileNav);
     scrollTop?.addEventListener('click', scrollToTop);
@@ -254,8 +261,8 @@
     // Add social tooltips
     addSocialTooltips();
     
-    // Initialize typing effect after a delay
-    setTimeout(initTypingEffect, 500);
+    // Initialize typing effect faster
+    setTimeout(initTypingEffect, 200);
 
     // Set active nav link based on current page
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
