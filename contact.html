@@ -310,7 +310,7 @@
     }
   </style>
 
-  <script>
+ <script>
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwf1IvkAaGKHv6h1AwYEsywzi6WbsXFvdr4OPyD0Zdt5X_wOgpxBJV_rOqpPTYnyzOjlA/exec';
 
 document.getElementById('contact-form').addEventListener('submit', async function(e) {
@@ -320,8 +320,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
   const submitBtn = form.querySelector('button[type="submit"]');
   const originalText = submitBtn.innerHTML;
 
-  // Get user name
-  const name = form.querySelector('input[name="name"]').value;
+  const name = form.querySelector('[name="name"]').value;
 
   submitBtn.innerHTML = 'Sending...';
   submitBtn.disabled = true;
@@ -335,41 +334,35 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     });
 
     const result = await response.text();
+    console.log("Server Response:", result);
 
-    if (result.includes("Success")) {
-      
-      // Show success message (custom UI)
-      const messageBox = document.getElementById('form-message');
-      messageBox.innerHTML = `
-        <div style="padding: 15px; background: #e6ffed; color: #155724; border-radius: 8px;">
+    // ✅ FIXED CONDITION
+    if (response.ok) {
+      document.getElementById('form-message').innerHTML = `
+        <div style="padding:15px;background:#e6ffed;color:#155724;border-radius:8px;">
           <strong>Thank you, ${name}! 🎉</strong><br>
           Your message has been received successfully.<br>
-          We will respond to you within <strong>24 hours</strong>.
+          We will respond within <strong>24 hours</strong>.
         </div>
       `;
 
       form.reset();
     } else {
-      showError(result);
+      throw new Error(result);
     }
 
   } catch (error) {
-    showError("Failed to send. Check internet or script deployment.");
+    document.getElementById('form-message').innerHTML = `
+      <div style="padding:15px;background:#ffe6e6;color:#721c24;border-radius:8px;">
+        ❌ Failed to send. Please try again.
+      </div>
+    `;
   }
 
-  submitBtn.innerHTML = originalText;
+  // ✅ ALWAYS RESET BUTTON (IMPORTANT)
+  submitBtn.innerHTML = '<i class="bi bi-send"></i> Send Message';
   submitBtn.disabled = false;
 });
-
-// Error function
-function showError(msg) {
-  const messageBox = document.getElementById('form-message');
-  messageBox.innerHTML = `
-    <div style="padding: 15px; background: #ffe6e6; color: #721c24; border-radius: 8px;">
-      ❌ ${msg}
-    </div>
-  `;
-}
 </script>
 
 </body>
