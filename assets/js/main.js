@@ -218,14 +218,14 @@
 
   // Initialize everything when DOM is loaded
   function init() {
-    // Remove preloader faster
+    // Remove skeleton preloader
     if (preloader) {
       setTimeout(() => {
         preloader.style.opacity = '0';
         setTimeout(() => {
           preloader.remove();
-        }, 200);
-      }, 500);
+        }, 400);
+      }, 800);
     }
 
     // Initialize PureCounter
