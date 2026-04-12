@@ -111,6 +111,23 @@ function sendUserEmail(name, email, subject) {
   });
 }
 
+// ─── Test Function (run manually to debug emails) ──────────
+function testEmails() {
+  try {
+    sendUserEmail('Test User', 'rizwanarshad.se.official@gmail.com', 'Test Subject');
+    Logger.log('USER EMAIL: sent OK');
+  } catch(err) {
+    Logger.log('USER EMAIL FAILED: ' + err.message);
+  }
+
+  try {
+    sendAdminEmail('Test User', 'rizwanarshad.se.official@gmail.com', 'Test Subject', 'Web Dev', 'This is a test message.', new Date().toString());
+    Logger.log('ADMIN EMAIL: sent OK');
+  } catch(err) {
+    Logger.log('ADMIN EMAIL FAILED: ' + err.message);
+  }
+}
+
 // ─── Admin Notification Email ───────────────────────────────
 function sendAdminEmail(name, email, subject, service, message, date) {
 
