@@ -3,6 +3,9 @@
 // ============================================================
 
 function doPost(e) {
+  const output = ContentService.createTextOutput();
+  output.setMimeType(ContentService.MimeType.JSON);
+
   try {
     const sheet = SpreadsheetApp
       .openById('14CF2FLEvytIWYIkkQrl8grZxMvRVwuCD2wjFJi4UDRc')
@@ -24,15 +27,20 @@ function doPost(e) {
     // Notify admin
     try { sendAdminNotification(name, email, subject, service, message, date); } catch(err) {}
 
-    return ContentService
-      .createTextOutput(JSON.stringify({ status: 'success' }))
-      .setMimeType(ContentService.MimeType.JSON);
+    output.setContent(JSON.stringify({ status: 'success' }));
 
   } catch (error) {
-    return ContentService
-      .createTextOutput(JSON.stringify({ status: 'error', message: error.message }))
-      .setMimeType(ContentService.MimeType.JSON);
+    output.setContent(JSON.stringify({ status: 'error', message: error.message }));
   }
+
+  return output;
+}
+
+// Required for CORS preflight
+function doGet(e) {
+  return ContentService
+    .createTextOutput(JSON.stringify({ status: 'ok' }))
+    .setMimeType(ContentService.MimeType.JSON);
 }
 
 // ─── User Confirmation Email ────────────────────────────────
