@@ -311,18 +311,22 @@
   </style>
 
   <script>
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwf1IvkAaGKHv6h1AwYEsywzi6WbsXFvdr4OPyD0Zdt5X_wOgpxBJV_rOqpPTYnyzOjlA/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwf1IvkAaGKHv6h1AwYEsywzi6WbsXFvdr4OPyD0Zdt5X_wOgpxBJV_rOqpPTYnyzOjlA/exec';
 
-    document.getElementById('contact-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
 
-    const submitBtn = this.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
+  const form = this;
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalText = submitBtn.innerHTML;
 
-    submitBtn.innerHTML = 'Sending...';
-    submitBtn.disabled = true;
+  // Get user name
+  const name = form.querySelector('input[name="name"]').value;
 
-    const formData = new FormData(this);
+  submitBtn.innerHTML = 'Sending...';
+  submitBtn.disabled = true;
+
+  const formData = new FormData(form);
 
   try {
     const response = await fetch(GOOGLE_SCRIPT_URL, {
@@ -333,19 +337,39 @@
     const result = await response.text();
 
     if (result.includes("Success")) {
-      alert("✅ Message sent successfully!");
-      this.reset();
+      
+      // Show success message (custom UI)
+      const messageBox = document.getElementById('form-message');
+      messageBox.innerHTML = `
+        <div style="padding: 15px; background: #e6ffed; color: #155724; border-radius: 8px;">
+          <strong>Thank you, ${name}! 🎉</strong><br>
+          Your message has been received successfully.<br>
+          We will respond to you within <strong>24 hours</strong>.
+        </div>
+      `;
+
+      form.reset();
     } else {
-      alert("❌ Error: " + result);
+      showError(result);
     }
 
   } catch (error) {
-    alert("❌ Failed to send. Check internet or deployment.");
+    showError("Failed to send. Check internet or script deployment.");
   }
 
   submitBtn.innerHTML = originalText;
   submitBtn.disabled = false;
 });
+
+// Error function
+function showError(msg) {
+  const messageBox = document.getElementById('form-message');
+  messageBox.innerHTML = `
+    <div style="padding: 15px; background: #ffe6e6; color: #721c24; border-radius: 8px;">
+      ❌ ${msg}
+    </div>
+  `;
+}
 </script>
 
 </body>
