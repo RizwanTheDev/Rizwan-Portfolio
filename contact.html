@@ -312,44 +312,41 @@
 
   <script>
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyudF5e8UU5b1DBtxaOe_EoI8WRN8EpBI5N-8RALK4oeNwZcyGUwy4IwYb3UJabRpB5JA/exec';
-    
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const submitBtn = this.querySelector('button[type="submit"]');
-      const originalText = submitBtn.innerHTML;
-      
-      // Show sending state
-      submitBtn.innerHTML = '<i class="bi bi-send"></i> Sending...';
-      submitBtn.disabled = true;
-      
-      // Prepare form data
-      const formData = new FormData();
-      formData.append('name', this.name.value);
-      formData.append('email', this.email.value);
-      formData.append('subject', this.subject.value);
-      formData.append('service', this.service.value || 'Not specified');
-      formData.append('message', this.message.value);
-      formData.append('timestamp', new Date().toLocaleString());
-      
-      // Send to Google Sheets (fire and forget)
-      fetch(GOOGLE_SCRIPT_URL, {
-        method: 'POST',
-        body: formData
-      }).catch(() => {});
-      
-      // Show success immediately (don't wait for response)
-      setTimeout(() => {
-        submitBtn.innerHTML = '<i class="bi bi-check-circle"></i> Sent!';
-        alert(`Thank you ${this.name.value}! Your message has been received. I'll respond to you via email soon!`);
-        this.reset();
-        
-        setTimeout(() => {
-          submitBtn.innerHTML = originalText;
-          submitBtn.disabled = false;
-        }, 1000);
-      }, 800);
+
+    document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+
+    submitBtn.innerHTML = 'Sending...';
+    submitBtn.disabled = true;
+
+    const formData = new FormData(this);
+
+  try {
+    const response = await fetch(GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      body: formData
     });
-  </script>
+
+    const result = await response.text();
+
+    if (result.includes("Success")) {
+      alert("✅ Message sent successfully!");
+      this.reset();
+    } else {
+      alert("❌ Error: " + result);
+    }
+
+  } catch (error) {
+    alert("❌ Failed to send. Check internet or deployment.");
+  }
+
+  submitBtn.innerHTML = originalText;
+  submitBtn.disabled = false;
+});
+</script>
+
 </body>
 </html>
