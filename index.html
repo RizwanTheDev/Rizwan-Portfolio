@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
   <title>Rizwan Arshad - Software Engineer & Developer</title>
   <meta name="description" content="Software Engineering student passionate about web & mobile app development. Specializing in Flutter, HTML, CSS, JavaScript, and modern web technologies.">
   <meta name="keywords" content="software engineer, web developer, flutter developer, portfolio, rizwan arshad">
@@ -22,9 +22,20 @@
   
   <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
+  
+  <!-- FINAL Mobile Fix - HIGHEST PRIORITY -->
+  <link href="assets/css/final-mobile-fix.css" rel="stylesheet">
 </head>
 
 <body>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+  
+  <!-- Floating Orbs -->
+  <div class="floating-orb floating-orb-1"></div>
+  <div class="floating-orb floating-orb-2"></div>
+  <div class="floating-orb floating-orb-3"></div>
+  
   <!-- Skeleton Preloader -->
   <div id="preloader">
     <div class="sk-nav">
@@ -100,7 +111,7 @@
 
   <main>
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%), url('assets/img/hero-bg.jpg') !important; background-size: cover !important; background-position: center center !important; background-repeat: no-repeat !important; background-attachment: scroll !important;">
     <div class="floating-elements">
       <div class="floating-particle"></div>
       <div class="floating-particle"></div>
@@ -111,44 +122,51 @@
     <div class="container">
       <h2>Hi, I'm Rizwan Arshad</h2>
       <div class="subtitle">
-        <p>Software Engineering student with a passion for web and mobile application development,</p>
-        <p>along with a strong interest in network engineering. I love building practical, secure,</p>
-        <p>and scalable solutions that solve real-world problems.</p>
+        <p>Software Engineering Student | Full-Stack Developer | Network Enthusiast</p>
+        <p>Crafting elegant digital solutions with modern technologies.</p>
+        <p>Specialized in Web Development, Mobile Apps & Network Infrastructure.</p>
       </div>
       
       <div class="cta-buttons">
         <a href="about.html" class="btn btn-primary">
-          <i class="bi bi-person"></i>
-          About Me
+          <i class="bi bi-person-circle"></i>
+          Discover My Journey
         </a>
         <a href="assets/cv/Rizwan_Arshad_CV.pdf" class="btn btn-outline" download>
           <i class="bi bi-download"></i>
-          Download CV
+          Download Resume
         </a>
       </div>
+      
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator"></div>
     </div>
   </section>
 
   <!-- Quick Stats Section -->
   <section class="section light-background">
     <div class="container">
+      <div class="section-title">
+        <h2>My Impact in Numbers</h2>
+        <p>Measurable achievements that showcase my dedication and expertise</p>
+      </div>
       <div class="stats">
         <div class="row">
           <div class="stats-item">
+            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="2">0</span>
+            <p>Projects Delivered</p>
+          </div>
+          <div class="stats-item">
             <span class="purecounter" data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="2">0</span>
-            <p>Projects Completed</p>
+            <p>Satisfied Clients</p>
+          </div>
+          <div class="stats-item">
+            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="1000" data-purecounter-duration="2">0</span>
+            <p>Code Commits</p>
           </div>
           <div class="stats-item">
             <span class="purecounter" data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="2">0</span>
-            <p>Happy Clients</p>
-          </div>
-          <div class="stats-item">
-            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="200" data-purecounter-duration="2">0</span>
-            <p>Hours of Coding</p>
-          </div>
-          <div class="stats-item">
-            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="2">0</span>
-            <p>Technologies</p>
+            <p>Tech Stack Mastered</p>
           </div>
         </div>
       </div>
@@ -159,31 +177,38 @@
   <section class="section">
     <div class="container">
       <div class="section-title">
-        <h2>Core Skills</h2>
-        <p>Technologies and tools I work with to bring ideas to life</p>
+        <h2>Technical Expertise</h2>
+        <p>Cutting-edge technologies and frameworks I use to build exceptional digital experiences</p>
       </div>
 
       <div class="row">
         <div class="col-lg-6">
           <div class="skills">
             <div class="progress">
-              <span class="skill">HTML/CSS <i class="val">95%</i></span>
+              <span class="skill">HTML5 & CSS3 <i class="val">95%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" style="width: 95%" aria-valuenow="95"></div>
               </div>
             </div>
 
             <div class="progress">
-              <span class="skill">JavaScript <i class="val">80%</i></span>
+              <span class="skill">JavaScript & ES6+ <i class="val">85%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" style="width: 80%" aria-valuenow="80"></div>
+                <div class="progress-bar" style="width: 85%" aria-valuenow="85"></div>
               </div>
             </div>
 
             <div class="progress">
-              <span class="skill">Flutter <i class="val">85%</i></span>
+              <span class="skill">Flutter & Dart <i class="val">88%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" style="width: 85%" aria-valuenow="85"></div>
+                <div class="progress-bar" style="width: 88%" aria-valuenow="88"></div>
+              </div>
+            </div>
+            
+            <div class="progress">
+              <span class="skill">React.js <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" style="width: 75%" aria-valuenow="75"></div>
               </div>
             </div>
           </div>
@@ -192,46 +217,62 @@
         <div class="col-lg-6">
           <div class="skills">
             <div class="progress">
-              <span class="skill">MySQL <i class="val">90%</i></span>
+              <span class="skill">MySQL & Database Design <i class="val">92%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" style="width: 90%" aria-valuenow="90"></div>
+                <div class="progress-bar" style="width: 92%" aria-valuenow="92"></div>
               </div>
             </div>
 
             <div class="progress">
-              <span class="skill">Networking<i class="val">88%</i></span>
+              <span class="skill">Network Engineering (CCNA) <i class="val">88%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" style="width: 88%" aria-valuenow="88"></div>
               </div>
             </div>
-
+            
+            <div class="progress">
+              <span class="skill">WordPress & CMS <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" style="width: 90%" aria-valuenow="90"></div>
+              </div>
+            </div>
+            
+            <div class="progress">
+              <span class="skill">UI/UX Design <i class="val">82%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" style="width: 82%" aria-valuenow="82"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="text-center mt-4">
         <a href="about.html" class="btn btn-primary">
-          View All Skills
-          <i class="bi bi-arrow-right"></i>
+          <i class="bi bi-code-square"></i>
+          Explore All Skills
         </a>
       </div>
     </div>
   </section>
 
+  <!-- Section Divider -->
+  <div class="section-divider"></div>
+
   <!-- CTA Section -->
   <section class="section light-background">
     <div class="container text-center">
       <div>
-        <h2>Ready to Start Your Project?</h2>
-        <p class="mb-4">Let's work together to bring your ideas to life with modern, responsive solutions.</p>
+        <h2>Let's Build Something Amazing Together</h2>
+        <p class="mb-4">Ready to transform your ideas into reality? I'm here to help you create innovative, scalable, and user-friendly digital solutions.</p>
         <div class="d-flex justify-content-center gap-2">
           <a href="contact.html" class="btn btn-primary">
-            <i class="bi bi-envelope"></i>
-            Get In Touch
+            <i class="bi bi-chat-dots-fill"></i>
+            Start a Conversation
           </a>
           <a href="services.html" class="btn btn-primary">
-            <i class="bi bi-gear"></i>
-            View Services
+            <i class="bi bi-briefcase-fill"></i>
+            View My Services
           </a>
         </div>
       </div>

@@ -233,6 +233,16 @@
       new PureCounter();
     }
 
+    // Scroll Progress Bar
+    const scrollProgress = document.getElementById('scrollProgress');
+    if (scrollProgress) {
+      window.addEventListener('scroll', () => {
+        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (window.scrollY / windowHeight) * 100;
+        scrollProgress.style.width = scrolled + '%';
+      }, { passive: true });
+    }
+
     // Optimized scroll event listener
     let scrollTimeout;
     window.addEventListener('scroll', () => {
@@ -307,6 +317,12 @@
 
     // Initial scroll check
     handleScroll();
+    
+    // Add staggered animation to cards
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card, index) => {
+      card.style.animationDelay = `${index * 0.1}s`;
+    });
   }
 
   // Initialize when DOM is ready
@@ -343,3 +359,15 @@
   document.head.appendChild(style);
 
 })();
+
+
+// Mobile viewport height fix
+function setVH() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+// Set on load and resize
+window.addEventListener('load', setVH);
+window.addEventListener('resize', setVH);
+window.addEventListener('orientationchange', setVH);

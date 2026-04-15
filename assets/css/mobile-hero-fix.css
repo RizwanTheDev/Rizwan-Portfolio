@@ -1,0 +1,627 @@
+/* ========================================
+   MOBILE HERO SECTION - COMPLETE FIX
+   Best Practices Implementation
+   ======================================== */
+
+/* ==========================================
+   PART 1: BASE HERO STYLES (All Devices)
+   ========================================== */
+
+.hero {
+  /* Full viewport coverage */
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Use min-height instead of height */
+  
+  /* Background image setup */
+  background-image: 
+    linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%),
+    url('../img/hero-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+  /* Flexbox for perfect content centering */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Proper spacing */
+  padding: 100px 20px 60px;
+  
+  /* Prevent content overflow */
+  overflow: visible;
+  
+  /* Performance optimization */
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Hero overlay effects */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(245, 87, 108, 0.3) 0%, transparent 50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Hero content container */
+.hero .container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  
+  /* Flexbox for content alignment */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Hero heading */
+.hero h2 {
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  
+  /* Gradient text effect */
+  background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  
+  /* Text shadow for better readability */
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.2));
+  
+  /* Ensure visibility */
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Hero subtitle */
+.hero .subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+  color: white;
+  
+  /* Text shadow for readability */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  
+  /* Ensure visibility */
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.hero .subtitle p {
+  margin-bottom: 0.75rem;
+  color: rgba(255, 255, 255, 0.98);
+}
+
+/* Hero buttons */
+.hero .cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.hero .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  min-height: 52px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+/* ==========================================
+   PART 2: DESKTOP OPTIMIZATION (1024px+)
+   ========================================== */
+
+@media (min-width: 1024px) {
+  .hero {
+    /* Keep fixed attachment for parallax effect */
+    background-attachment: fixed;
+    padding: 120px 40px 80px;
+  }
+  
+  .hero .container {
+    padding: 0 40px;
+  }
+  
+  .hero h2 {
+    font-size: clamp(3rem, 5vw, 5rem);
+  }
+  
+  .hero .subtitle {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  }
+}
+
+/* ==========================================
+   PART 3: TABLET OPTIMIZATION (768px-1023px)
+   ========================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero {
+    /* Switch to scroll for better mobile performance */
+    background-attachment: scroll;
+    
+    /* Ensure full background display */
+    background-size: cover;
+    background-position: center center;
+    
+    /* Adjust spacing */
+    padding: 100px 30px 70px;
+    min-height: 100vh;
+  }
+  
+  .hero .container {
+    padding: 0 30px;
+    max-width: 90%;
+  }
+  
+  .hero h2 {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero .subtitle {
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+    margin-bottom: 2rem;
+  }
+  
+  .hero .cta-buttons {
+    gap: 1.25rem;
+  }
+  
+  .btn {
+    padding: 1rem 1.75rem;
+    min-height: 52px;
+  }
+}
+
+/* ==========================================
+   PART 4: MOBILE OPTIMIZATION (767px and below)
+   CRITICAL FIXES FOR MOBILE DEVICES
+   ========================================== */
+
+@media (max-width: 767px) {
+  .hero {
+    /* BACKGROUND FIX - Force proper display */
+    background-image: 
+      linear-gradient(135deg, rgba(102, 126, 234, 0.88) 0%, rgba(118, 75, 162, 0.88) 100%),
+      url('../img/hero-bg.jpg') !important;
+    
+    /* CRITICAL: Use cover for full display */
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    
+    /* IMPORTANT: Scroll attachment for mobile */
+    background-attachment: scroll !important;
+    
+    /* HEIGHT FIX - Use min-height for flexibility */
+    min-height: 100vh;
+    min-height: -webkit-fill-available; /* iOS Safari fix */
+    height: auto; /* Allow content to expand */
+    
+    /* SPACING FIX - Proper mobile padding */
+    padding: 120px 20px 80px !important;
+    
+    /* LAYOUT FIX - Flexbox for perfect centering */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    
+    /* OVERFLOW FIX - Allow content to be visible */
+    overflow: visible !important;
+  }
+  
+  /* Container fixes */
+  .hero .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 6% !important;
+    
+    /* Flexbox for mobile layout */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    
+    /* Remove any height restrictions */
+    height: auto !important;
+    min-height: auto !important;
+  }
+  
+  /* Heading mobile optimization */
+  .hero h2 {
+    /* Responsive font size */
+    font-size: clamp(2.25rem, 9vw, 3.5rem) !important;
+    
+    /* Better spacing */
+    margin-bottom: 2rem !important;
+    line-height: 1.2 !important;
+    
+    /* Prevent text overflow */
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    
+    /* Ensure visibility */
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* Subtitle mobile optimization */
+  .hero .subtitle {
+    /* Responsive font size */
+    font-size: clamp(1.05rem, 4.5vw, 1.3rem) !important;
+    
+    /* Better spacing */
+    margin-bottom: 2.5rem !important;
+    line-height: 1.7 !important;
+    
+    /* Full width on mobile */
+    max-width: 100% !important;
+    width: 100% !important;
+    
+    /* Ensure visibility */
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .hero .subtitle p {
+    /* Ensure text is visible */
+    color: rgba(255, 255, 255, 0.98) !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+    
+    /* Better spacing */
+    margin-bottom: 0.75rem !important;
+    
+    /* Ensure visibility */
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* Buttons mobile optimization */
+  .hero .cta-buttons {
+    /* Stack buttons vertically */
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.25rem !important;
+    width: 100% !important;
+    margin-top: 2rem !important;
+    
+    /* Ensure visibility */
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .hero .btn {
+    /* Full width buttons on mobile */
+    width: 100% !important;
+    max-width: min(320px, 92vw) !important;
+    
+    /* Touch-friendly size */
+    padding: 1.125rem 1.75rem !important;
+    font-size: 1.05rem !important;
+    min-height: 54px !important;
+    
+    /* Center content */
+    justify-content: center !important;
+    text-align: center !important;
+    
+    /* Ensure visibility */
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* Hide decorative elements on mobile */
+  .floating-orb,
+  .scroll-indicator,
+  .floating-particle {
+    display: none !important;
+  }
+  
+  /* Simplify animations on mobile */
+  .hero::before,
+  .hero::after {
+    animation: none !important;
+  }
+}
+
+/* ==========================================
+   PART 5: SMALL MOBILE (480px and below)
+   ========================================== */
+
+@media (max-width: 480px) {
+  .hero {
+    /* Tighter padding for small screens */
+    padding: 110px 15px 70px !important;
+    
+    /* Ensure background is visible */
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+  
+  .hero .container {
+    padding: 0 5% !important;
+  }
+  
+  .hero h2 {
+    /* Smaller font for tiny screens */
+    font-size: clamp(2rem, 9vw, 3rem) !important;
+    margin-bottom: 1.75rem !important;
+  }
+  
+  .hero .subtitle {
+    font-size: clamp(1rem, 4.5vw, 1.2rem) !important;
+    margin-bottom: 2.25rem !important;
+  }
+  
+  .hero .btn {
+    max-width: min(300px, 92vw) !important;
+    padding: 1.125rem 1.5rem !important;
+    font-size: 1rem !important;
+  }
+  
+  /* Single column stats */
+  .stats .row {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+}
+
+/* ==========================================
+   PART 6: EXTRA SMALL MOBILE (375px and below)
+   ========================================== */
+
+@media (max-width: 375px) {
+  .hero {
+    padding: 100px 12px 60px !important;
+  }
+  
+  .hero h2 {
+    font-size: clamp(1.85rem, 9vw, 2.75rem) !important;
+    line-height: 1.15 !important;
+  }
+  
+  .hero .subtitle {
+    font-size: clamp(0.95rem, 4.5vw, 1.15rem) !important;
+  }
+  
+  .hero .btn {
+    max-width: min(280px, 90vw) !important;
+    padding: 1rem 1.25rem !important;
+    font-size: 0.95rem !important;
+  }
+}
+
+/* ==========================================
+   PART 7: LANDSCAPE MOBILE OPTIMIZATION
+   ========================================== */
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .hero {
+    /* Reduce height for landscape */
+    min-height: 100vh;
+    padding: 80px 20px 60px !important;
+  }
+  
+  .hero h2 {
+    font-size: clamp(1.75rem, 6vw, 2.5rem) !important;
+    margin-bottom: 1.25rem !important;
+  }
+  
+  .hero .subtitle {
+    font-size: clamp(0.95rem, 3vw, 1.1rem) !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .hero .cta-buttons {
+    /* Horizontal layout in landscape */
+    flex-direction: row !important;
+    gap: 1rem !important;
+    flex-wrap: wrap !important;
+  }
+  
+  .hero .btn {
+    max-width: 200px !important;
+    padding: 0.875rem 1.5rem !important;
+    font-size: 0.95rem !important;
+  }
+}
+
+/* ==========================================
+   PART 8: iOS SAFARI SPECIFIC FIXES
+   ========================================== */
+
+@supports (-webkit-touch-callout: none) {
+  .hero {
+    /* Fix for iOS Safari viewport height */
+    min-height: -webkit-fill-available !important;
+  }
+  
+  @media (max-width: 767px) {
+    .hero {
+      /* Ensure full height on iOS */
+      height: 100vh !important;
+      min-height: 100vh !important;
+      min-height: -webkit-fill-available !important;
+    }
+  }
+}
+
+/* ==========================================
+   PART 9: ANDROID CHROME SPECIFIC FIXES
+   ========================================== */
+
+@media screen and (max-width: 767px) {
+  .hero {
+    /* Fix for Android Chrome address bar */
+    min-height: 100vh !important;
+    min-height: calc(var(--vh, 1vh) * 100) !important;
+  }
+}
+
+/* ==========================================
+   PART 10: TOUCH DEVICE OPTIMIZATIONS
+   ========================================== */
+
+@media (hover: none) and (pointer: coarse) {
+  /* Touch-friendly button sizes */
+  .hero .btn {
+    min-height: 48px !important;
+    padding: 1rem 1.5rem !important;
+  }
+  
+  /* Remove hover effects on touch devices */
+  .hero .btn:hover {
+    transform: none;
+  }
+  
+  /* Larger tap targets */
+  .hero .btn {
+    min-width: 44px;
+  }
+}
+
+/* ==========================================
+   PART 11: PREVENT HORIZONTAL SCROLL
+   ========================================== */
+
+@media (max-width: 767px) {
+  /* Prevent any horizontal overflow */
+  body, html {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    position: relative !important;
+  }
+  
+  .hero,
+  .hero .container,
+  .hero .cta-buttons {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  
+  /* Ensure all elements stay within bounds */
+  * {
+    max-width: 100%;
+  }
+}
+
+/* ==========================================
+   PART 12: PERFORMANCE OPTIMIZATIONS
+   ========================================== */
+
+@media (max-width: 767px) {
+  /* Reduce animations on mobile */
+  .hero * {
+    animation-duration: 0.5s !important;
+  }
+  
+  /* Optimize rendering */
+  .hero {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  
+  /* Disable expensive effects on mobile */
+  .hero::before {
+    opacity: 0.5;
+  }
+}
+
+/* ==========================================
+   PART 13: ACCESSIBILITY IMPROVEMENTS
+   ========================================== */
+
+@media (max-width: 767px) {
+  /* Ensure text is readable */
+  .hero h2,
+  .hero .subtitle,
+  .hero .subtitle p {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Ensure sufficient contrast */
+  .hero .subtitle p {
+    color: rgba(255, 255, 255, 0.98) !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+  }
+}
+
+/* ==========================================
+   PART 14: FALLBACK FOR OLDER BROWSERS
+   ========================================== */
+
+@media (max-width: 767px) {
+  /* Fallback for browsers without clamp() support */
+  @supports not (font-size: clamp(1rem, 2vw, 3rem)) {
+    .hero h2 {
+      font-size: 2.5rem;
+    }
+    
+    .hero .subtitle {
+      font-size: 1.1rem;
+    }
+    
+    .hero .btn {
+      font-size: 1rem;
+    }
+  }
+}
+
+/* ==========================================
+   BEST PRACTICES SUMMARY
+   ========================================== 
+   
+   ✅ Use min-height instead of height for flexibility
+   ✅ Use background-size: cover for full coverage
+   ✅ Use background-attachment: scroll on mobile
+   ✅ Use Flexbox for perfect centering
+   ✅ Use clamp() for responsive typography
+   ✅ Use proper viewport units with fallbacks
+   ✅ Optimize for touch devices
+   ✅ Prevent horizontal scroll
+   ✅ Ensure content visibility
+   ✅ Add device-specific fixes (iOS, Android)
+   ✅ Optimize performance on mobile
+   ✅ Maintain accessibility standards
+   
+   ========================================== */
