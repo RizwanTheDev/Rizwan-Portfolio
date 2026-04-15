@@ -125,10 +125,113 @@ h1, h2, h3, h4, h5, h6 {
   .hero {
     min-height: 90vh;
     padding: 2rem 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.88) 0%, rgba(118, 75, 162, 0.88) 100%) !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: scroll !important;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+  
+  .hero::before,
+  .hero::after {
+    display: none !important;
+  }
+  
+  .hero .floating-elements,
+  .hero .floating-particle {
+    display: none !important;
+  }
+  
+  .hero h2 {
+    color: white !important;
+    background: none !important;
+    -webkit-text-fill-color: white !important;
+    animation: none !important;
+  }
+  
+  .hero .subtitle p {
+    color: white !important;
+    opacity: 1 !important;
+    animation: none !important;
+  }
+  
+  .hero .cta-buttons {
+    animation: none !important;
+  }
+  
+  .btn {
+    animation: none !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .btn::before,
+  .btn::after {
+    display: none !important;
   }
   
   .section {
     padding: 3rem 0;
+    animation: none !important;
+  }
+  
+  .section::before {
+    display: none !important;
+  }
+  
+  .stats-item {
+    animation: none !important;
+  }
+  
+  .stats-item::before,
+  .stats-item::after {
+    display: none !important;
+  }
+  
+  .stats-item span {
+    animation: none !important;
+    text-shadow: none !important;
+  }
+  
+  .card {
+    animation: none !important;
+  }
+  
+  .card::before,
+  .card::after {
+    display: none !important;
+  }
+  
+  .skills .progress-bar::before,
+  .skills .progress-bar::after {
+    display: none !important;
+  }
+  
+  .floating-orb,
+  .floating-orb-1,
+  .floating-orb-2,
+  .floating-orb-3 {
+    display: none !important;
+  }
+  
+  .scroll-indicator {
+    display: none !important;
+  }
+  
+  /* Disable all animations */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.2s !important;
+  }
+  
+  /* Fix for blinking text */
+  h1, h2, h3, h4, h5, h6, p, span, a {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 }
 
@@ -426,7 +529,7 @@ h1, h2, h3, h4, h5, h6 {
   background: 
     linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%),
     url('../img/hero-bg.jpg');
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -435,10 +538,42 @@ h1, h2, h3, h4, h5, h6 {
   padding: 80px 0 40px;
 }
 
+/* Disable fixed background on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .hero {
+    background-attachment: scroll !important;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+}
+
 @media (max-width: 1024px) {
   .hero {
-    background-attachment: scroll;
-    background-size: 100% 100%;
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.88) 0%, rgba(118, 75, 162, 0.88) 100%) !important;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+  
+  .hero::before,
+  .hero::after {
+    display: none !important;
+  }
+  
+  .floating-orb,
+  .floating-orb-1,
+  .floating-orb-2,
+  .floating-orb-3 {
+    display: none !important;
+  }
+  
+  /* Disable animations on all tablets and mobile desktop */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0s !important;
+    transition-duration: 0.2s !important;
   }
 }
 
@@ -706,27 +841,61 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Tablet and Mobile Desktop Mode */
 @media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
   .hero {
-    min-height: 80vh;
+    min-height: 90vh;
     padding: 3rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.88) 0%, rgba(118, 75, 162, 0.88) 100%) !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: scroll !important;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+  
+  .hero::before,
+  .hero::after {
+    display: none !important;
+  }
+  
+  .hero .floating-elements,
+  .hero .floating-particle {
+    display: none !important;
   }
   
   .hero .container {
     text-align: center;
     max-width: 90%;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
   }
   
   .hero h2 {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     margin-bottom: 1.5rem;
+    color: white !important;
+    background: none !important;
+    -webkit-text-fill-color: white !important;
+    animation: none !important;
   }
   
   .hero .subtitle {
     font-size: clamp(1.1rem, 2.5vw, 1.4rem);
     margin-bottom: 2rem;
+    animation: none !important;
+  }
+  
+  .hero .subtitle p {
+    color: white !important;
+    opacity: 1 !important;
+    animation: none !important;
   }
   
   .hero .cta-buttons {
@@ -734,12 +903,20 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     gap: 1.5rem;
     flex-wrap: wrap;
+    animation: none !important;
   }
   
   .btn {
     padding: 1rem 2rem;
     font-size: 1rem;
     min-width: 200px;
+    animation: none !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .btn::before,
+  .btn::after {
+    display: none !important;
   }
   
   .stats .row {
@@ -748,8 +925,86 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1.5rem;
   }
   
+  .stats-item {
+    animation: none !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .stats-item::before,
+  .stats-item::after {
+    display: none !important;
+  }
+  
+  .stats-item span {
+    animation: none !important;
+    text-shadow: none !important;
+  }
+  
+  .section {
+    animation: none !important;
+  }
+  
+  .section::before {
+    display: none !important;
+  }
+  
   .section-title h2 {
     font-size: clamp(2rem, 4vw, 2.8rem);
+    animation: none !important;
+  }
+  
+  .section-title h2::after {
+    animation: none !important;
+  }
+  
+  .section-title p {
+    animation: none !important;
+  }
+  
+  .card {
+    animation: none !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .card::before,
+  .card::after {
+    display: none !important;
+  }
+  
+  .skills .progress-bar {
+    animation: none !important;
+  }
+  
+  .skills .progress-bar::before,
+  .skills .progress-bar::after {
+    display: none !important;
+  }
+  
+  .floating-orb,
+  .floating-orb-1,
+  .floating-orb-2,
+  .floating-orb-3 {
+    display: none !important;
+  }
+  
+  .scroll-indicator {
+    display: none !important;
+  }
+  
+  /* Disable all animations on tablet/mobile desktop */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.2s !important;
+  }
+  
+  /* Fix for blinking text */
+  h1, h2, h3, h4, h5, h6, p, span, a {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 }
 
