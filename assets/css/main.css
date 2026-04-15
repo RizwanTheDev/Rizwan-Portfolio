@@ -758,6 +758,8 @@ h1, h2, h3, h4, h5, h6 {
   body {
     overflow-x: hidden;
     width: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
   html {
@@ -774,9 +776,24 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-size: 100% 100% !important;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.88) 0%, rgba(118, 75, 162, 0.88) 100%) !important;
+    background-size: cover !important;
     background-position: center center !important;
     background-attachment: scroll !important;
+    background-repeat: no-repeat !important;
+    will-change: auto;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+  
+  .hero::before,
+  .hero::after {
+    display: none !important;
+  }
+  
+  .hero .floating-elements,
+  .hero .floating-particle {
+    display: none !important;
   }
   
   .hero .container {
@@ -787,6 +804,8 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     padding: 0 5%;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
   }
   
   .hero h2 {
@@ -796,6 +815,13 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     width: 100%;
     word-wrap: break-word;
+    color: white !important;
+    background: none !important;
+    -webkit-text-fill-color: white !important;
+    text-fill-color: white !important;
+    animation: none !important;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
   }
   
   .hero .subtitle {
@@ -805,12 +831,16 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     max-width: 100%;
     width: 100%;
+    animation: none !important;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
   }
   
   .hero .subtitle p {
     margin-bottom: 0.75rem;
     color: white !important;
-    opacity: 1;
+    opacity: 1 !important;
+    animation: none !important;
   }
   
   .hero .cta-buttons {
@@ -822,6 +852,9 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
+    animation: none !important;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
   }
   
   .btn {
@@ -833,15 +866,28 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
     min-height: 52px;
     text-align: center;
+    animation: none !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    will-change: transform;
+  }
+  
+  .btn::before,
+  .btn::after {
+    display: none !important;
   }
   
   .scroll-indicator {
-    display: block;
+    display: none !important;
   }
   
   .section {
     padding: 3.5rem 0;
     width: 100%;
+    animation: none !important;
+  }
+  
+  .section::before {
+    display: none !important;
   }
   
   .section-title {
@@ -849,16 +895,23 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 3rem;
     width: 100%;
     padding: 0 5%;
+    animation: none !important;
   }
   
   .section-title h2 {
     font-size: clamp(2rem, 6vw, 2.5rem);
     margin-bottom: 1.25rem;
+    animation: none !important;
+  }
+  
+  .section-title h2::after {
+    animation: none !important;
   }
   
   .section-title p {
     font-size: 1rem;
     line-height: 1.7;
+    animation: none !important;
   }
   
   .stats {
@@ -877,10 +930,19 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2rem 1.5rem;
     text-align: center;
     width: 100%;
+    animation: none !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .stats-item::before,
+  .stats-item::after {
+    display: none !important;
   }
   
   .stats-item span {
     font-size: clamp(2.5rem, 7vw, 3rem);
+    animation: none !important;
+    text-shadow: none !important;
   }
   
   .stats-item p {
@@ -892,6 +954,13 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1.5rem;
     width: 100%;
     box-sizing: border-box;
+    animation: none !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .card::before,
+  .card::after {
+    display: none !important;
   }
   
   .skills {
@@ -901,6 +970,15 @@ h1, h2, h3, h4, h5, h6 {
   .skills .progress {
     margin-bottom: 2rem;
     width: 100%;
+  }
+  
+  .skills .progress-bar {
+    animation: none !important;
+  }
+  
+  .skills .progress-bar::before,
+  .skills .progress-bar::after {
+    display: none !important;
   }
   
   .d-flex.justify-content-center.gap-2 {
@@ -924,9 +1002,11 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
   }
   
-  .floating-orb {
-    display: block;
-    opacity: 0.2;
+  .floating-orb,
+  .floating-orb-1,
+  .floating-orb-2,
+  .floating-orb-3 {
+    display: none !important;
   }
   
   .container {
@@ -949,6 +1029,22 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 100%;
     padding: 0;
     margin-bottom: 1.5rem;
+  }
+  
+  /* Disable all animations on mobile */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.2s !important;
+  }
+  
+  /* Fix for blinking text */
+  h1, h2, h3, h4, h5, h6, p, span, a {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 }
 
@@ -2145,6 +2241,8 @@ main {
     width: 100%;
     overflow-x: hidden;
     font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
   .container {
@@ -2162,11 +2260,24 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.88) 0%, rgba(118, 75, 162, 0.88) 100%) !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: scroll !important;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+  
+  .hero::before,
+  .hero::after {
+    display: none !important;
   }
   
   .hero .container {
     text-align: center;
     padding: 0 5%;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
   }
   
   .hero h2 {
@@ -2175,6 +2286,10 @@ main {
     margin-bottom: 1.25rem;
     word-wrap: break-word;
     padding: 0;
+    color: white !important;
+    background: none !important;
+    -webkit-text-fill-color: white !important;
+    animation: none !important;
   }
   
   .hero .subtitle {
@@ -2182,10 +2297,12 @@ main {
     margin-bottom: 1.75rem;
     line-height: 1.6;
     padding: 0;
+    animation: none !important;
   }
   
   .hero .subtitle p {
     margin-bottom: 0.5rem;
+    animation: none !important;
   }
   
   .hero .cta-buttons {
@@ -2197,6 +2314,7 @@ main {
     padding: 0;
     justify-content: center;
     flex-wrap: wrap;
+    animation: none !important;
   }
   
   .btn {
@@ -2207,11 +2325,23 @@ main {
     max-width: 180px;
     min-height: 48px;
     border-radius: 10px;
+    animation: none !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .btn::before,
+  .btn::after {
+    display: none !important;
   }
   
   .section {
     padding: 2.75rem 0;
     width: 100%;
+    animation: none !important;
+  }
+  
+  .section::before {
+    display: none !important;
   }
   
   .stats .row {
@@ -2227,10 +2357,18 @@ main {
     padding: 1.75rem 1.25rem;
     width: 100%;
     margin: 0;
+    animation: none !important;
+  }
+  
+  .stats-item::before,
+  .stats-item::after {
+    display: none !important;
   }
   
   .stats-item span {
     font-size: clamp(2.25rem, 7vw, 2.75rem);
+    animation: none !important;
+    text-shadow: none !important;
   }
   
   .stats-item p {
@@ -2240,22 +2378,35 @@ main {
   .section-title {
     margin-bottom: 2.5rem;
     padding: 0 5%;
+    animation: none !important;
   }
   
   .section-title h2 {
     font-size: clamp(1.75rem, 6vw, 2.25rem);
     margin-bottom: 1rem;
+    animation: none !important;
+  }
+  
+  .section-title h2::after {
+    animation: none !important;
   }
   
   .section-title p {
     font-size: 0.95rem;
     line-height: 1.6;
+    animation: none !important;
   }
   
   .card {
     padding: 1.75rem;
     margin-bottom: 1.25rem;
     width: 100%;
+    animation: none !important;
+  }
+  
+  .card::before,
+  .card::after {
+    display: none !important;
   }
   
   .card h3 {
@@ -2273,6 +2424,15 @@ main {
   
   .skills .progress {
     margin-bottom: 1.75rem;
+  }
+  
+  .skills .progress-bar {
+    animation: none !important;
+  }
+  
+  .skills .progress-bar::before,
+  .skills .progress-bar::after {
+    display: none !important;
   }
   
   .skills .skill {
@@ -2319,6 +2479,22 @@ main {
   .footer .header-social-links a {
     width: 3rem;
     height: 3rem;
+  }
+  
+  .floating-orb,
+  .floating-orb-1,
+  .floating-orb-2,
+  .floating-orb-3 {
+    display: none !important;
+  }
+  
+  /* Disable all animations on small mobile */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.2s !important;
   }
 }
 
