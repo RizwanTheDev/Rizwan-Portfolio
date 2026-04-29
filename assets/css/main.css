@@ -579,6 +579,9 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   width: 100%;
   padding: 80px 0 40px;
+  will-change: transform;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 /* Disable fixed background on touch devices */
@@ -623,30 +626,34 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
   .hero {
     background: 
-      linear-gradient(135deg, rgba(102, 126, 234, 0.88) 0%, rgba(118, 75, 162, 0.88) 100%),
+      linear-gradient(135deg, rgba(102, 126, 234, 0.75) 0%, rgba(118, 75, 162, 0.75) 100%),
       url('../img/hero-bg.jpg');
-    background-size: 100% 100%;
+    background-size: auto 100%;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: scroll;
+    background-color: #667eea;
     min-height: 100vh;
     min-height: -webkit-fill-available;
     padding: 100px 0 60px;
+    will-change: auto;
   }
 }
 
 @media (max-width: 480px) {
   .hero {
     background: 
-      linear-gradient(135deg, rgba(102, 126, 234, 0.88) 0%, rgba(118, 75, 162, 0.88) 100%),
+      linear-gradient(135deg, rgba(102, 126, 234, 0.75) 0%, rgba(118, 75, 162, 0.75) 100%),
       url('../img/hero-bg.jpg');
-    background-size: 100% 100%;
+    background-size: auto 100%;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: scroll;
+    background-color: #667eea;
     min-height: 100vh;
     min-height: -webkit-fill-available;
     padding: 100px 0 60px;
+    will-change: auto;
   }
 }
 
@@ -3834,9 +3841,10 @@ body::before {
 /* Extra Small Mobile Devices */
 @media (max-width: 480px) {
   .hero {
-    background-size: 100% 100% !important;
+    background-size: auto 100% !important;
     background-position: center center !important;
     background-attachment: scroll !important;
+    background-color: #667eea !important;
     min-height: 100vh;
     min-height: -webkit-fill-available;
     padding: 110px 0 70px !important;
@@ -3885,8 +3893,9 @@ body::before {
 @media (max-width: 767px) and (orientation: landscape) {
   .hero {
     min-height: 100vh;
-    background-size: 100% 100% !important;
+    background-size: 100% auto !important;
     background-position: center center !important;
+    background-color: #667eea !important;
   }
   
   .hero .container {
@@ -3973,9 +3982,10 @@ body::before {
 /* Force Full Background Display */
 @media (max-width: 991px) {
   .hero {
-    background-size: 100% 100% !important;
+    background-size: auto 100% !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
+    background-color: #667eea !important;
     width: 100vw !important;
     position: relative !important;
   }
@@ -4016,7 +4026,9 @@ body::before {
 @media (max-width: 375px) {
   .hero {
     padding: 100px 0 60px !important;
-    background-size: 100% 100% !important;
+    background-size: auto 100% !important;
+    background-position: center center !important;
+    background-color: #667eea !important;
   }
   
   .hero .container {
