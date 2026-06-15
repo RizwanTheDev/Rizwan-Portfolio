@@ -1,0 +1,382 @@
+/* MOBILE FIXES - Unified Button Sizes & Hero Background */
+
+/* All Mobile Devices - Hero Background Cover */
+@media (max-width: 991px) {
+  .hero {
+    background-size: auto 100% !important;
+    background-position: center center !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-size: auto 100% !important;
+    background-position: center center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    background-size: auto 100% !important;
+    background-position: center center !important;
+  }
+
+  .container,
+  .section,
+  .footer .container {
+    overflow-x: hidden;
+  }
+}
+
+/* ========================================
+   UNIFIED BUTTON STYLES FOR ALL MOBILE
+   ALL BUTTONS SAME SIZE ON WHOLE PROJECT
+   ======================================== */
+
+/* Mobile (767px and below) - ALL BUTTONS */
+@media (max-width: 767px) {
+  /* Universal Button Style */
+  .home-page .btn,
+  .about-page .btn,
+  .btn,
+  .hero .cta-buttons .btn,
+  .d-flex.justify-content-center.gap-2 .btn,
+  .action-buttons .btn,
+  .card .btn,
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline,
+  button.btn,
+  a.btn {
+    width: auto !important;
+    min-width: 140px !important;
+    max-width: 170px !important;
+    padding: 0.9rem 1.2rem !important;
+    font-size: 0.9rem !important;
+    border-radius: 28px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3) !important;
+  }
+  
+  /* Hero Section Buttons Container */
+  .hero .cta-buttons {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.85rem !important;
+    flex-wrap: wrap !important;
+  }
+  
+  /* All Button Containers */
+  .d-flex.justify-content-center.gap-2,
+  .action-buttons,
+  .cta-buttons {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.85rem !important;
+    flex-wrap: wrap !important;
+  }
+  
+  /* Button Icons */
+  .btn i {
+    font-size: 0.95rem !important;
+    margin-right: 0.4rem !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+  }
+}
+
+/* Small Mobile (480px) - ALL BUTTONS */
+@media (max-width: 480px) {
+  .home-page .btn,
+  .about-page .btn,
+  .btn,
+  .hero .cta-buttons .btn,
+  .d-flex.justify-content-center.gap-2 .btn,
+  .action-buttons .btn,
+  .card .btn,
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline,
+  button.btn,
+  a.btn {
+    width: auto !important;
+    min-width: 135px !important;
+    max-width: 162px !important;
+    padding: 0.85rem 1.15rem !important;
+    font-size: 0.875rem !important;
+    border-radius: 26px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3) !important;
+  }
+  
+  .hero .cta-buttons,
+  .d-flex.justify-content-center.gap-2,
+  .action-buttons {
+    gap: 0.8rem !important;
+  }
+  
+  .btn i {
+    font-size: 0.9rem !important;
+    margin-right: 0.38rem !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+  }
+}
+
+/* Extra Small Mobile (375px) - ALL BUTTONS */
+@media (max-width: 375px) {
+  .hero {
+    background-size: cover !important;
+  }
+  
+  .home-page .btn,
+  .about-page .btn,
+  .btn,
+  .hero .cta-buttons .btn,
+  .d-flex.justify-content-center.gap-2 .btn,
+  .action-buttons .btn,
+  .card .btn,
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline,
+  button.btn,
+  a.btn {
+    width: auto !important;
+    min-width: 128px !important;
+    max-width: 155px !important;
+    padding: 0.8rem 1.1rem !important;
+    font-size: 0.85rem !important;
+    border-radius: 24px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3) !important;
+  }
+  
+  .hero .cta-buttons,
+  .d-flex.justify-content-center.gap-2,
+  .action-buttons {
+    gap: 0.75rem !important;
+  }
+  
+  .btn i {
+    font-size: 0.85rem !important;
+    margin-right: 0.35rem !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+  }
+}
+
+/* Very Small Mobile (360px) - ALL BUTTONS */
+@media (max-width: 360px) {
+  .hero {
+    background-size: cover !important;
+  }
+  
+  .home-page .btn,
+  .about-page .btn,
+  .btn,
+  .hero .cta-buttons .btn,
+  .d-flex.justify-content-center.gap-2 .btn,
+  .action-buttons .btn,
+  .card .btn,
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline,
+  button.btn,
+  a.btn {
+    width: auto !important;
+    min-width: 122px !important;
+    max-width: 148px !important;
+    padding: 0.75rem 1.05rem !important;
+    font-size: 0.825rem !important;
+    border-radius: 22px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3) !important;
+  }
+  
+  .hero .cta-buttons,
+  .d-flex.justify-content-center.gap-2,
+  .action-buttons {
+    gap: 0.7rem !important;
+  }
+  
+  .btn i {
+    font-size: 0.8rem !important;
+    margin-right: 0.32rem !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+  }
+}
+
+/* CV Modal Buttons */
+@media (max-width: 767px) {
+  .cv-btn,
+  .cv-btn-primary,
+  .cv-btn-secondary {
+    width: auto !important;
+    min-width: 115px !important;
+    max-width: 140px !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .cv-btn,
+  .cv-btn-primary,
+  .cv-btn-secondary {
+    width: auto !important;
+    min-width: 110px !important;
+    max-width: 135px !important;
+    padding: 0.7rem 0.95rem !important;
+    font-size: 0.825rem !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .cv-btn,
+  .cv-btn-primary,
+  .cv-btn-secondary {
+    width: auto !important;
+    min-width: 105px !important;
+    max-width: 128px !important;
+    padding: 0.65rem 0.9rem !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .cv-btn,
+  .cv-btn-primary,
+  .cv-btn-secondary {
+    width: auto !important;
+    min-width: 100px !important;
+    max-width: 122px !important;
+    padding: 0.6rem 0.85rem !important;
+    font-size: 0.775rem !important;
+  }
+}
+
+
+/* Force Button Icons to Show on Mobile */
+@media (max-width: 767px) {
+  .btn i,
+  .btn-primary i,
+  .hero .cta-buttons .btn i,
+  a.btn i,
+  button.btn i {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: auto !important;
+    height: auto !important;
+    font-size: 0.95rem !important;
+    margin-right: 0.4rem !important;
+    vertical-align: middle !important;
+    line-height: 1 !important;
+  }
+  
+  /* Specific fix for hero buttons */
+  .hero .btn i.bi-person-circle,
+  .hero .btn i.bi-eye {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn i,
+  .btn-primary i,
+  .hero .cta-buttons .btn i,
+  a.btn i,
+  button.btn i {
+    font-size: 0.9rem !important;
+    margin-right: 0.38rem !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .btn i,
+  .btn-primary i,
+  .hero .cta-buttons .btn i,
+  a.btn i,
+  button.btn i {
+    font-size: 0.85rem !important;
+    margin-right: 0.35rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .btn i,
+  .btn-primary i,
+  .hero .cta-buttons .btn i,
+  a.btn i,
+  button.btn i {
+    font-size: 0.8rem !important;
+    margin-right: 0.32rem !important;
+  }
+}
+
+
+/* ========================================
+   HERO BACKGROUND COMPLETE IMAGE FIX
+   ======================================== */
+
+/* Desktop - Show complete width */
+@media (min-width: 992px) {
+  .hero {
+    background-size: cover !important;
+    background-position: center center !important;
+    min-height: 100vh !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero {
+    background-size: auto 100% !important;
+    background-position: center center !important;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 767px) and (orientation: portrait) {
+  .hero {
+    background-size: auto 100% !important;
+    background-position: center center !important;
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 767px) and (orientation: landscape) {
+  .hero {
+    background-size: 100% auto !important;
+    background-position: center center !important;
+  }
+}
+
+/* Extra Small */
+@media (max-width: 375px) {
+  .hero {
+    background-size: auto 100% !important;
+    background-position: center center !important;
+  }
+}
+
+/* Very Small */
+@media (max-width: 360px) {
+  .hero {
+    background-size: auto 100% !important;
+    background-position: center center !important;
+  }
+}

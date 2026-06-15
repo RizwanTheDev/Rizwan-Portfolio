@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
-  <title>Resume - Rizwan Arshad</title>
+  <title>Rizwan Arshad</title>
   <meta name="description" content="Rizwan Arshad's professional resume - Software Engineering student with expertise in web and mobile development">
   <meta name="keywords" content="rizwan arshad resume, software engineer cv, web developer resume">
 
@@ -14,7 +14,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -22,9 +22,14 @@
 
   <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/header-enhanced.css" rel="stylesheet">
+  <link href="assets/css/mobile-fixes.css" rel="stylesheet">
+  
+  <!-- CV Admin System CSS -->
+  <link href="assets/css/cv-admin-system.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="resume-page">
   <!-- Scroll Progress Bar -->
   <div class="scroll-progress" id="scrollProgress"></div>
   
@@ -64,10 +69,7 @@
   <!-- Header -->
   <header class="header">
     <div class="container">
-      <a href="index.html" class="logo">
-        Rιȥɯαɳ
-      </a>
-
+      <a href="index.html" class="logo">Rιȥɯαɳ</a>
       <nav class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -77,14 +79,12 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-
       <div class="header-social-links">
-        <a href="https://twitter.com" class="twitter" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://facebook.com" class="facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://instagram.com" class="instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/c%D4%8B-r%CE%B9%C8%A5%C9%AF%CE%B1%C9%B3-a%C9%BE%CA%82%D4%8B%CE%B1%D4%83-0a024a366/" class="linkedin" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://twitter.com" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://facebook.com" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://instagram.com" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/c%D4%8B-r%CE%B9%C8%A5%C9%AF%CE%B1%C9%B3-a%C9%BE%CA%82%D4%8B%CE%B1%D4%83-0a024a366/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
-
       <button class="mobile-nav-toggle" aria-label="Toggle navigation">
         <span></span>
         <span></span>
@@ -104,10 +104,10 @@
 
         <!-- Download CV Button -->
         <div class="text-center mb-5">
-          <a class="btn btn-primary btn-lg" href="assets/cv/Rizwan_Arshad_CV.pdf" download>
+          <button class="btn btn-primary btn-lg" data-cv-download>
             <i class="bi bi-download"></i>
             Download My CV
-          </a>
+          </button>
         </div>
 
         <div class="row">
@@ -120,7 +120,7 @@
                 <h4>Rizwan Arshad</h4>
                 <p><em>Motivated Software Engineering student with a passion for web and mobile app development. Dedicated to applying academic knowledge to real-world solutions and eager to contribute to innovative projects that make a positive impact.</em></p>
                 <ul>
-                  <li><i class="bi bi-geo-alt"></i>Kasur, Punjab Pakistan</li>
+                  <li><i class="bi bi-geo-alt"></i>Lahore, Punjab Pakistan</li>
                   <li><i class="bi bi-phone"></i> <a href="tel:+923455933107" style="color: var(--primary-color);">+92 345 5933107</a></li>
                   <li><i class="bi bi-envelope"></i> <a href="mailto:rizwanarshad.se.official@gmail.com" style="color: var(--primary-color);">rizwanarshad.se.official@gmail.com</a></li>
                   <li><i class="bi bi-linkedin"></i> LinkedIn Profile Available</li>
@@ -196,7 +196,7 @@
                   <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
                     <iframe 
                       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-                      src="https://drive.google.com/file/d/1jzeiP-rSJ1RpYXGbBNLFr3sUBd83PPZw/preview" 
+                      src="https://drive.google.com/file/d/1b1y23idnnpI6ZJ520muFfDtRKUkTGLof/preview" 
                       allow="autoplay"
                       allowfullscreen>
                     </iframe>
@@ -280,14 +280,10 @@
           <div class="card" style="max-width: 600px; margin: 0 auto;">
             <h3>Ready to Work Together?</h3>
             <p>I'm always open to discussing new opportunities and exciting projects. Let's connect and see how we can collaborate!</p>
-            <div class="d-flex justify-content-center gap-2">
+            <div class="d-flex justify-content-center">
               <a href="contact.html" class="btn btn-primary">
                 <i class="bi bi-envelope"></i>
                 Contact Me
-              </a>
-              <a href="https://www.linkedin.com/in/c%D4%8B-r%CE%B9%C8%A5%C9%AF%CE%B1%C9%B3-a%C9%BE%CA%82%D4%8B%CE%B1%D4%83-0a024a366/" class="btn btn-primary" target="_blank">
-                <i class="bi bi-linkedin"></i>
-                LinkedIn
               </a>
             </div>
           </div>
@@ -319,5 +315,10 @@
   <!-- Scripts -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/js/main.js"></script>
+  
+  <!-- CV Admin System JS -->
+  <script src="assets/js/cv-admin-system.js"></script>
+  <script src="assets/js/particles.js"></script>
+  <script src="assets/js/header-particles.js"></script>
 </body>
 </html>

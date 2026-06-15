@@ -1,0 +1,248 @@
+/* ========================================
+   ABOUT PAGE COMPLETE VISIBILITY FIX
+   ======================================== */
+
+/* Ensure About Page Content is Fully Visible */
+body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+}
+
+/* Main Content Area */
+main {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  width: 100% !important;
+  overflow: visible !important;
+}
+
+/* First Section - About Me */
+main > section.section:first-child {
+  padding-top: 140px !important;
+  margin-top: 0 !important;
+  min-height: auto !important;
+  overflow: visible !important;
+}
+
+/* Section Title - About Me Heading */
+.section-title {
+  padding-top: 2rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 3rem !important;
+  text-align: center !important;
+  width: 100% !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.section-title h2 {
+  font-size: 2.5rem !important;
+  margin: 0 0 1rem 0 !important;
+  padding: 0 !important;
+  line-height: 1.3 !important;
+  color: var(--text-primary) !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.section-title p {
+  font-size: 1.125rem !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  max-width: 700px !important;
+  line-height: 1.7 !important;
+  color: var(--text-secondary) !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* About Section Container */
+.about-section {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  width: 100% !important;
+  overflow: visible !important;
+}
+
+/* Profile Card */
+.profile-card {
+  margin-bottom: 2rem !important;
+  width: 100% !important;
+}
+
+/* About Content */
+.about-content {
+  width: 100% !important;
+  padding: 2.5rem !important;
+}
+
+.about-content h2 {
+  margin-top: 0 !important;
+  margin-bottom: 1.5rem !important;
+  font-size: 2rem !important;
+  line-height: 1.3 !important;
+}
+
+.about-content p {
+  margin-bottom: 1.5rem !important;
+  line-height: 1.8 !important;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  main > section.section:first-child {
+    padding-top: 120px !important;
+  }
+  
+  .section-title {
+    padding-top: 1.5rem !important;
+  }
+  
+  .section-title h2 {
+    font-size: 2.25rem !important;
+  }
+  
+  .section-title p {
+    font-size: 1.0625rem !important;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  main > section.section:first-child {
+    padding-top: 110px !important;
+  }
+  
+  .section-title {
+    padding-top: 1.5rem !important;
+    margin-bottom: 2.5rem !important;
+  }
+  
+  .section-title h2 {
+    font-size: 2rem !important;
+    margin-bottom: 0.85rem !important;
+  }
+  
+  .section-title p {
+    font-size: 1rem !important;
+    padding: 0 1rem !important;
+  }
+  
+  .about-content {
+    padding: 1.75rem !important;
+  }
+  
+  .about-content h2 {
+    font-size: 1.75rem !important;
+    text-align: center !important;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  main > section.section:first-child {
+    padding-top: 100px !important;
+  }
+  
+  .section-title {
+    padding-top: 1rem !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  .section-title h2 {
+    font-size: 1.75rem !important;
+    margin-bottom: 0.75rem !important;
+    padding: 0 0.5rem !important;
+  }
+  
+  .section-title p {
+    font-size: 0.95rem !important;
+    padding: 0 0.75rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  .about-content {
+    padding: 1.5rem !important;
+  }
+  
+  .about-content h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  .about-content p.lead {
+    font-size: 1rem !important;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+  main > section.section:first-child {
+    padding-top: 95px !important;
+  }
+  
+  .section-title h2 {
+    font-size: 1.6rem !important;
+  }
+  
+  .section-title p {
+    font-size: 0.9rem !important;
+  }
+  
+  .about-content h2 {
+    font-size: 1.4rem !important;
+  }
+}
+
+/* Ensure All Text is Visible */
+h1, h2, h3, h4, h5, h6, p, span, a {
+  visibility: visible !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+}
+
+/* Container Proper Width */
+.container {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 2rem !important;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem !important;
+  }
+}
+
+/* Fix Row Alignment */
+.row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  margin: 0 -0.75rem !important;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column !important;
+    margin: 0 !important;
+  }
+}
+
+/* Prevent Text Cutoff */
+* {
+  box-sizing: border-box !important;
+}
+
+html, body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+}

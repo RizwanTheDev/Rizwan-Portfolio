@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
-  <title>Contact - Rizwan Arshad</title>
+  <title>Rizwan Arshad</title>
   <meta name="description" content="Get in touch with Rizwan Arshad for web development, mobile app development, and UI/UX design services">
   <meta name="keywords" content="contact rizwan arshad, hire web developer, flutter developer contact">
 
@@ -14,7 +14,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -22,9 +22,11 @@
 
   <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/header-enhanced.css" rel="stylesheet">
+  <link href="assets/css/mobile-fixes.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="contact-page">
   <!-- Scroll Progress Bar -->
   <div class="scroll-progress" id="scrollProgress"></div>
   
@@ -64,10 +66,7 @@
   <!-- Header -->
   <header class="header">
     <div class="container">
-      <a href="index.html" class="logo">
-        Rιȥɯαɳ
-      </a>
-
+      <a href="index.html" class="logo">Rιȥɯαɳ</a>
       <nav class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -77,14 +76,12 @@
           <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
       </nav>
-
       <div class="header-social-links">
-        <a href="https://twitter.com" class="twitter" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://facebook.com" class="facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://instagram.com" class="instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/c%D4%8B-r%CE%B9%C8%A5%C9%AF%CE%B1%C9%B3-a%C9%BE%CA%82%D4%8B%CE%B1%D4%83-0a024a366/" class="linkedin" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://twitter.com" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://facebook.com" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://instagram.com" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/c%D4%8B-r%CE%B9%C8%A5%C9%AF%CE%B1%C9%B3-a%C9%BE%CA%82%D4%8B%CE%B1%D4%83-0a024a366/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
-
       <button class="mobile-nav-toggle" aria-label="Toggle navigation">
         <span></span>
         <span></span>
@@ -304,55 +301,160 @@
   <!-- Scripts -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/particles.js"></script>
+  <script src="assets/js/header-particles.js"></script>
 
   <style>
     .form-control {
       width: 100%;
-      padding: 0.75rem;
-      border: 1px solid var(--border-color);
-      border-radius: var(--border-radius-sm);
-      font-size: 1rem;
-      transition: var(--transition-normal);
-      background: var(--bg-primary);
+      padding: 14px 16px;
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      background: white;
+      font-family: inherit;
     }
 
     .form-control:focus {
       outline: none;
-      border-color: var(--primary-color);
-      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+      border-color: #6366f1;
+      box-shadow: 0 0 0 4px rgba(99,102,241,0.1);
+      transform: translateY(-2px);
     }
 
     .form-label {
       display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 500;
-      color: var(--text-primary);
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #1f2937;
+      font-size: 14px;
     }
 
     .contact-form {
       max-width: 100%;
     }
 
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+
     .faq-item {
       margin-bottom: 1rem;
     }
 
+    .faq-item .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(99,102,241,0.15);
+    }
+
     .social-links-contact .btn {
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
+      padding: 12px 20px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .social-links-contact .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(99,102,241,0.3);
+    }
+
+    #form-success {
+      padding: 40px 24px;
+      animation: successSlideIn 0.5s ease;
+    }
+
+    @keyframes successSlideIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    #submit-btn {
+      padding: 14px 28px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(99,102,241,0.3);
+    }
+
+    #submit-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(99,102,241,0.4);
     }
 
     @media (max-width: 768px) {
+      .card {
+        padding: 24px 20px;
+        border-radius: 12px;
+      }
+
+      .form-control {
+        padding: 12px 14px;
+        font-size: 14px;
+      }
+
       .d-flex.gap-2 {
         flex-direction: column;
+        gap: 12px !important;
       }
       
       .social-links-contact .btn {
         width: 100%;
-        margin-bottom: 0.5rem;
+        justify-content: center;
+      }
+
+      #submit-btn {
+        width: 100%;
+        padding: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 20px 16px;
+      }
+
+      .form-control {
+        padding: 12px;
+        font-size: 14px;
       }
     }
   </style>
+
+<style>
+.form-control{width:100%;padding:14px 16px;border:2px solid #e5e7eb;border-radius:12px;font-size:15px;transition:all .3s ease;background:#f9fafb;font-family:'Inter',sans-serif;box-sizing:border-box}
+.form-control:focus{outline:none;border-color:#6366f1;background:#fff;box-shadow:0 0 0 4px rgba(99,102,241,.1);transform:translateY(-1px)}
+.form-label{display:block;margin-bottom:8px;font-weight:600;color:#1f2937;font-size:14px}
+.contact-form{max-width:100%}
+.contact-form .btn-primary{padding:14px 28px;font-size:15px;font-weight:600;border-radius:12px;box-shadow:0 4px 15px rgba(99,102,241,.3);transition:all .3s ease}
+.contact-form .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(99,102,241,.4)}
+.faq-item{margin-bottom:1rem}
+.social-links-contact .btn{padding:12px 20px;font-size:15px;font-weight:600;border-radius:12px}
+#form-success{animation:successFadeIn .5s ease}
+@keyframes successFadeIn{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
+@media(max-width:768px){
+.contact-form .row .col-md-6{margin-bottom:16px}
+.form-control{font-size:16px;padding:16px}
+.form-label{font-size:15px}
+.contact-form .btn-primary{width:100%;padding:16px;font-size:16px}
+.d-flex.gap-2{flex-direction:column;gap:12px!important}
+.social-links-contact .btn{width:100%;padding:14px;margin-bottom:0}
+.card{padding:20px!important}
+.contact-info .d-flex{flex-direction:row;align-items:flex-start}
+.contact-info .d-flex>div:first-child{flex-shrink:0}
+}
+@media(max-width:480px){
+.form-control{padding:14px}
+.contact-form .btn-primary{padding:14px}
+}
+</style>
 
 <script>
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwf1IvkAaGKHv6h1AwYEsywzi6WbsXFvdr4OPyD0Zdt5X_wOgpxBJV_rOqpPTYnyzOjlA/exec';

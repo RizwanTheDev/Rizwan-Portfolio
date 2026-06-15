@@ -1,0 +1,621 @@
+/* ========================================
+   COMPREHENSIVE UI ALIGNMENT & FIXES
+   ======================================== */
+
+/* Reset and Base Alignment */
+* {
+  box-sizing: border-box !important;
+}
+
+body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+}
+
+/* Container Proper Alignment */
+.container {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 2rem !important;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem !important;
+  }
+}
+
+/* Section Alignment */
+.section {
+  width: 100% !important;
+  padding: 5rem 0 !important;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3.5rem 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 2.5rem 0 !important;
+  }
+}
+
+/* Section Title Alignment */
+.section-title {
+  text-align: center !important;
+  margin-bottom: 3rem !important;
+  width: 100% !important;
+}
+
+.section-title h2 {
+  margin-bottom: 1rem !important;
+}
+
+.section-title p {
+  max-width: 700px !important;
+  margin: 0 auto !important;
+}
+
+/* Hero Section Perfect Alignment */
+.hero {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.hero .container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.hero h2 {
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.hero .subtitle {
+  text-align: center !important;
+  width: 100% !important;
+  max-width: 800px !important;
+  margin: 0 auto 2rem !important;
+}
+
+.hero .cta-buttons {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  width: 100% !important;
+  flex-wrap: wrap !important;
+}
+
+@media (max-width: 768px) {
+  .hero .cta-buttons {
+    flex-direction: row !important;
+    gap: 0.85rem !important;
+  }
+}
+
+/* Grid System Proper Alignment */
+.row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  margin: 0 -0.75rem !important;
+  width: 100% !important;
+}
+
+.col, .col-lg-4, .col-lg-6, .col-lg-8, .col-md-6 {
+  padding: 0 0.75rem !important;
+  width: 100% !important;
+}
+
+.col-lg-4 {
+  flex: 0 0 33.333333% !important;
+  max-width: 33.333333% !important;
+}
+
+.col-lg-6, .col-md-6 {
+  flex: 0 0 50% !important;
+  max-width: 50% !important;
+}
+
+.col-lg-8 {
+  flex: 0 0 66.666667% !important;
+  max-width: 66.666667% !important;
+}
+
+@media (max-width: 1024px) {
+  .col-lg-4 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column !important;
+    margin: 0 !important;
+  }
+  
+  .col, .col-lg-4, .col-lg-6, .col-lg-8, .col-md-6 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+/* Card Alignment */
+.card {
+  width: 100% !important;
+  height: 100% !important;
+  padding: 2rem !important;
+  margin-bottom: 1.5rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.card.text-center {
+  text-align: center !important;
+  align-items: center !important;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 1.75rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1.5rem !important;
+  }
+}
+
+/* Stats Grid Alignment */
+.stats .row {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 1.5rem !important;
+  margin: 0 !important;
+}
+
+.stats-item {
+  text-align: center !important;
+  padding: 2rem !important;
+  width: 100% !important;
+}
+
+@media (max-width: 1024px) {
+  .stats .row {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.25rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats .row {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+  }
+  
+  .stats-item {
+    padding: 1.5rem 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats .row {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .stats-item {
+    padding: 1.5rem !important;
+  }
+}
+
+/* Skills Section Alignment */
+.skills {
+  width: 100% !important;
+}
+
+.skills .progress {
+  width: 100% !important;
+  margin-bottom: 2rem !important;
+}
+
+.skills .skill {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.skills .progress-bar-wrap {
+  width: 100% !important;
+}
+
+/* Button Alignment */
+.btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  gap: 0.5rem !important;
+}
+
+.btn i {
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+/* Flex Utilities Proper Alignment */
+.d-flex {
+  display: flex !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.d-flex.gap-2 {
+  gap: 1rem !important;
+  flex-wrap: wrap !important;
+}
+
+@media (max-width: 768px) {
+  .d-flex.gap-2 {
+    gap: 0.85rem !important;
+  }
+}
+
+/* Footer Alignment */
+.footer {
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.footer .container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.footer .header-social-links {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.footer .copyright {
+  text-align: center !important;
+  width: 100% !important;
+}
+
+/* About Page Profile Alignment */
+.profile-card {
+  width: 100% !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.profile-image {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.profile-info {
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.contact-info {
+  width: 100% !important;
+  max-width: 300px !important;
+  margin: 0 auto !important;
+}
+
+.about-content {
+  width: 100% !important;
+}
+
+.details-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+  gap: 1.5rem !important;
+  width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .details-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.action-buttons {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  flex-wrap: wrap !important;
+}
+
+@media (max-width: 768px) {
+  .action-buttons {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  
+  .action-buttons .btn {
+    width: 100% !important;
+    max-width: 300px !important;
+  }
+}
+
+/* Resume Section Alignment */
+.resume .resume-item {
+  width: 100% !important;
+  padding-left: 2rem !important;
+}
+
+.resume .resume-title {
+  margin: 2rem 0 1.5rem !important;
+}
+
+/* Services Page Alignment */
+.services-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  gap: 2rem !important;
+  width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+}
+
+/* Contact Page Alignment */
+.contact-form {
+  width: 100% !important;
+  max-width: 600px !important;
+  margin: 0 auto !important;
+}
+
+.form-group {
+  width: 100% !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.form-control {
+  width: 100% !important;
+  padding: 1rem !important;
+}
+
+textarea.form-control {
+  min-height: 150px !important;
+  resize: vertical !important;
+}
+
+/* Image Alignment */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+}
+
+/* Scroll Top Button Alignment */
+.scroll-top {
+  position: fixed !important;
+  bottom: 2rem !important;
+  right: 2rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+@media (max-width: 768px) {
+  .scroll-top {
+    bottom: 1.5rem !important;
+    right: 1.5rem !important;
+  }
+}
+
+/* Mobile Nav Menu Alignment */
+@media (max-width: 768px) {
+  .navmenu ul {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  
+  .navmenu ul li {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  
+  .navmenu ul li a {
+    width: 100% !important;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+/* Header Social Links Alignment */
+.header-social-links {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+}
+
+.header-social-links a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Typography Alignment */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0 !important;
+  line-height: 1.3 !important;
+}
+
+p {
+  margin-top: 0 !important;
+  line-height: 1.7 !important;
+}
+
+/* List Alignment */
+ul, ol {
+  padding-left: 1.5rem !important;
+}
+
+.about .content ul {
+  list-style: none !important;
+  padding: 0 !important;
+}
+
+.about .content ul li {
+  display: flex !important;
+  align-items: flex-start !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* Prevent Horizontal Scroll */
+body, html {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth !important;
+}
+
+/* Focus Styles for Accessibility */
+a:focus, button:focus, input:focus, textarea:focus, select:focus {
+  outline: 2px solid #6366f1 !important;
+  outline-offset: 2px !important;
+}
+
+/* Print Styles */
+@media print {
+  .header, .footer, .scroll-top, .mobile-nav-toggle {
+    display: none !important;
+  }
+  
+  body {
+    padding-top: 0 !important;
+  }
+}
+
+/* ========================================
+   ALL PAGES SPACING - FULLY VISIBLE
+   Content below header, not inside
+   ======================================== */
+
+/* Remove top padding from main on all pages */
+main {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* About Page - Show Below Header */
+.about-section,
+main > section:first-child:not(.hero) {
+  margin-top: 0 !important;
+  padding-top: 160px !important;
+}
+
+/* Services, Contact, Resume Pages - Show Below Header */
+.services-section,
+.contact-section,
+.resume-section,
+main > .section:first-child:not(.hero) {
+  margin-top: 0 !important;
+  padding-top: 160px !important;
+}
+
+/* Section Title Extra Space */
+.section-title {
+  padding-top: 3rem !important;
+  margin-top: 0 !important;
+}
+
+.section-title h2 {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .about-section,
+  .services-section,
+  .contact-section,
+  .resume-section,
+  main > section:first-child:not(.hero),
+  main > .section:first-child:not(.hero) {
+    margin-top: 0 !important;
+    padding-top: 130px !important;
+  }
+  
+  .section-title {
+    padding-top: 2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section,
+  .services-section,
+  .contact-section,
+  .resume-section,
+  main > section:first-child:not(.hero),
+  main > .section:first-child:not(.hero) {
+    margin-top: 0 !important;
+    padding-top: 110px !important;
+  }
+  
+  .section-title {
+    padding-top: 1.5rem !important;
+  }
+}

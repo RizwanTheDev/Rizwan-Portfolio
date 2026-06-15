@@ -25,21 +25,9 @@
 
   // Mobile navigation toggle
   function toggleMobileNav() {
+    mobileToggle?.classList.toggle('active');
     navMenu?.classList.toggle('active');
     document.body.classList.toggle('mobile-nav-active');
-    
-    // Animate hamburger menu
-    const spans = mobileToggle?.querySelectorAll('span');
-    spans?.forEach((span, index) => {
-      if (navMenu?.classList.contains('active')) {
-        if (index === 0) span.style.transform = 'rotate(45deg) translate(5px, 5px)';
-        if (index === 1) span.style.opacity = '0';
-        if (index === 2) span.style.transform = 'rotate(-45deg) translate(7px, -6px)';
-      } else {
-        span.style.transform = 'none';
-        span.style.opacity = '1';
-      }
-    });
   }
 
   // Close mobile nav when clicking on links
@@ -257,7 +245,10 @@
       }, 10);
     }, { passive: true });
 
-    mobileToggle?.addEventListener('click', toggleMobileNav);
+    mobileToggle?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMobileNav();
+    });
     scrollTop?.addEventListener('click', scrollToTop);
 
     // Close mobile nav when clicking on nav links
