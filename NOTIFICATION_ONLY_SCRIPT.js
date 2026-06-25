@@ -137,7 +137,8 @@ function sendAdminNotification(id, name, email, company, purpose, timestamp) {
                           <table width="100%" cellpadding="0" cellspacing="0">
                             <tr>
                               <td style="padding:8px">
-                                <a href="mailto:${email}?subject=Re%3A%20CV%20Request&body=Hello%2C%0A%0AThank%20you%20for%20your%20interest.%20As%20requested%2C%20I%20am%20sharing%20my%20CV%20for%20your%20review.%20Please%20let%20me%20know%20if%20you%20need%20any%20additional%20information.%0A%0ACV%20Link%3A%20https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1Fx2tFJcpH9Jd5veEugQ41FBPYIL3C3LK%2Fview%3Fusp%3Dsharing%0A%0ABest%20regards%2C%0ARizwan%20Arshad"
+                              // cv link attached on this below on center
+                                <a href="mailto:${email}?subject=Re%3A%20CV%20Request&body=Hello%2C%0A%0AThank%20you%20for%20your%20interest.%20As%20requested%2C%20I%20am%20sharing%20my%20CV%20for%20your%20review.%20Please%20let%20me%20know%20if%20you%20need%20any%20additional%20information.%0A%0ACV%20Link%3A%20https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1r7x0Vwx1b9WBbkgYF-6N435waLptPGok%2Fview%3Fusp%3Dsharing%0A%0ABest%20regards%2C%0ARizwan%20Arshad"
                                 style="display:block;background:white;color:#854d0e;padding:14px 20px;text-decoration:none;border-radius:8px;font-weight:600;border:2px solid #fde047">
                                 📧 Reply via Email
                                 </a>
