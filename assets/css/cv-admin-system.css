@@ -87,6 +87,77 @@
   margin-bottom: 24px;
 }
 
+html[data-theme='dark'] .cv-modal-content {
+  background: #081025;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.45);
+}
+
+html[data-theme='dark'] .cv-modal-header {
+  background: linear-gradient(135deg, #2e2a5f 0%, #3f3a8f 100%);
+}
+
+html[data-theme='dark'] .cv-modal-header h3,
+html[data-theme='dark'] .cv-close {
+  color: #f8fafc;
+}
+
+html[data-theme='dark'] .cv-modal-body {
+  background: transparent;
+}
+
+html[data-theme='dark'] .cv-modal-body > div > p:first-child {
+  color: #cbd5e1;
+}
+
+html[data-theme='dark'] .cv-form-group label {
+  color: #e2e8f0;
+}
+
+html[data-theme='dark'] .cv-form-group input,
+html[data-theme='dark'] .cv-form-group textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #e5e7eb;
+}
+
+html[data-theme='dark'] .cv-form-group input::placeholder,
+html[data-theme='dark'] .cv-form-group textarea::placeholder {
+  color: rgba(226, 232, 240, 0.55);
+}
+
+html[data-theme='dark'] .cv-form-group input:focus,
+html[data-theme='dark'] .cv-form-group textarea:focus {
+  border-color: rgba(124, 58, 237, 0.6);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+html[data-theme='dark'] .cv-btn-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  color: #e5e7eb;
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+html[data-theme='dark'] .cv-success-icon,
+html[data-theme='dark'] #cvRequestSuccess h4,
+html[data-theme='dark'] #cvRequestSuccess p,
+html[data-theme='dark'] .cv-success-details p,
+html[data-theme='dark'] .cv-success-details ul,
+html[data-theme='dark'] .cv-success-details li {
+  color: #e5e7eb;
+}
+
+html[data-theme='dark'] .cv-success-details {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(17, 24, 39, 0.96));
+  border-left-color: #22c55e;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.30);
+}
+
+html[data-theme='dark'] .cv-btn-primary {
+  background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+  color: #fff;
+}
+
 .cv-form-group {
   margin-bottom: 20px;
 }

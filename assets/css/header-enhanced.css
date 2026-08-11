@@ -24,6 +24,29 @@
   border-bottom: 1px solid rgba(226, 232, 240, 0.6);
 }
 
+/* Force clear header background on all pages */
+body .header,
+.home-page .header,
+.about-page .header,
+.services-page .header,
+.contact-page .header,
+.resume-page .header {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(25px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.35) !important;
+}
+
+body .header.scrolled,
+.home-page .header.scrolled,
+.about-page .header.scrolled,
+.services-page .header.scrolled,
+.contact-page .header.scrolled,
+.resume-page .header.scrolled {
+  background: rgba(255, 255, 255, 0.98) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
 /* Enhanced Logo */
 .logo {
   display: flex;

@@ -380,3 +380,137 @@
     background-position: center center !important;
   }
 }
+
+/* Final dark mode overrides for header, mobile menu, hero, and resume text */
+html[data-theme='dark'] .header,
+html[data-theme='dark'] .header.scrolled {
+  background: rgba(5, 10, 25, 0.95) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+html[data-theme='dark'] .navmenu ul {
+  background: rgba(9, 16, 37, 0.98) !important;
+  border-top-color: rgba(124, 58, 237, 0.35) !important;
+}
+
+html[data-theme='dark'] .navmenu ul li a,
+html[data-theme='dark'] .navmenu a {
+  color: var(--text-secondary) !important;
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
+html[data-theme='dark'] .navmenu ul li a:hover,
+html[data-theme='dark'] .navmenu ul li a.active,
+html[data-theme='dark'] .navmenu a:hover,
+html[data-theme='dark'] .navmenu a.active {
+  color: var(--secondary-color) !important;
+  background: rgba(255,255,255,0.06) !important;
+}
+
+html[data-theme='dark'] .mobile-nav-toggle {
+  background: rgba(255,255,255,0.08) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25) !important;
+}
+
+html[data-theme='dark'] .mobile-nav-toggle span {
+  background: rgba(226, 232, 240, 0.95) !important;
+}
+
+html[data-theme='dark'] .hero {
+  background:
+    linear-gradient(135deg, rgba(5, 8, 20, 0.85) 0%, rgba(7, 19, 39, 0.92) 60%, rgba(11, 22, 48, 0.98) 100%),
+    url('../img/hero-bg.jpg') center/cover no-repeat !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+}
+
+html[data-theme='dark'] .hero::before,
+html[data-theme='dark'] .hero::after {
+  background: none !important;
+}
+
+html[data-theme='dark'] .resume .resume-item,
+html[data-theme='dark'] .resume .resume-title,
+html[data-theme='dark'] .resume .resume-item h4,
+html[data-theme='dark'] .resume .resume-item h5,
+html[data-theme='dark'] .resume .resume-item p,
+html[data-theme='dark'] .resume .resume-item ul li,
+html[data-theme='dark'] .resume .resume-item li,
+html[data-theme='dark'] .resume .resume-item em,
+html[data-theme='dark'] .resume .resume-item a,
+html[data-theme='dark'] .resume .resume-item strong {
+  color: var(--text-primary) !important;
+}
+
+html[data-theme='dark'] .about-section,
+html[data-theme='dark'] .about-content,
+html[data-theme='dark'] .details-grid,
+html[data-theme='dark'] .detail-item,
+html[data-theme='dark'] .profile-card,
+html[data-theme='dark'] .text-center .card {
+  background: rgba(255,255,255,0.04) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+html[data-theme='dark'] .detail-item:hover {
+  background: rgba(255,255,255,0.06) !important;
+}
+
+html[data-theme='dark'] .detail-item i,
+html[data-theme='dark'] .detail-item strong,
+html[data-theme='dark'] .detail-item span,
+html[data-theme='dark'] .about-content h2,
+html[data-theme='dark'] .about-content p,
+html[data-theme='dark'] .about-content .lead,
+html[data-theme='dark'] .section-title h2,
+html[data-theme='dark'] .section-title p,
+html[data-theme='dark'] .text-center h3,
+html[data-theme='dark'] .text-center p {
+  color: var(--text-primary) !important;
+}
+
+html[data-theme='dark'] .text-center .btn-primary {
+  background: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: #fff !important;
+}
+
+
+html[data-theme='dark'] .about-section,
+html[data-theme='dark'] .about-content,
+html[data-theme='dark'] .details-grid,
+html[data-theme='dark'] .detail-item,
+html[data-theme='dark'] .profile-card,
+html[data-theme='dark'] .text-center .card {
+  background: rgba(255,255,255,0.04) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+  color: var(--text-primary) !important;
+}
+
+html[data-theme='dark'] .detail-item:hover {
+  background: rgba(255,255,255,0.06) !important;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.24) !important;
+}
+
+html[data-theme='dark'] .detail-item i,
+html[data-theme='dark'] .detail-item strong,
+html[data-theme='dark'] .detail-item span,
+html[data-theme='dark'] .about-content h2,
+html[data-theme='dark'] .about-content p,
+html[data-theme='dark'] .about-content .lead,
+html[data-theme='dark'] .section-title h2,
+html[data-theme='dark'] .section-title p,
+html[data-theme='dark'] .text-center h3,
+html[data-theme='dark'] .text-center p {
+  color: var(--text-primary) !important;
+}
+
+html[data-theme='dark'] .text-center .btn-primary {
+  background: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: #fff !important;
+}
+

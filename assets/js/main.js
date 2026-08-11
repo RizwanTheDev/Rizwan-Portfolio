@@ -249,6 +249,22 @@
       e.stopPropagation();
       toggleMobileNav();
     });
+    // Close mobile nav when clicking outside of it
+    document.addEventListener('click', (e) => {
+      const target = e.target;
+      if (!navMenu || !mobileToggle) return;
+      const clickedInsideNav = navMenu.contains(target) || mobileToggle.contains(target);
+      if (!clickedInsideNav && navMenu.classList.contains('active')) {
+        toggleMobileNav();
+      }
+    });
+
+    // Close mobile nav on resize when switching to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+        toggleMobileNav();
+      }
+    });
     scrollTop?.addEventListener('click', scrollToTop);
 
     // Close mobile nav when clicking on nav links
@@ -314,6 +330,43 @@
     cards.forEach((card, index) => {
       card.style.animationDelay = `${index * 0.1}s`;
     });
+
+    // Theme handling: read saved preference or follow system
+    const themeToggles = document.querySelectorAll('.theme-toggle');
+    function applyTheme(theme) {
+      if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      else document.documentElement.removeAttribute('data-theme');
+      // Update icons for all toggles
+      themeToggles.forEach(toggle => {
+        const icon = toggle.querySelector('i');
+        if (!icon) return;
+        if (theme === 'dark') {
+          icon.className = 'bi bi-sun';
+          toggle.setAttribute('aria-label', 'Switch to light theme');
+        } else {
+          icon.className = 'bi bi-moon';
+          toggle.setAttribute('aria-label', 'Switch to dark theme');
+        }
+      });
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) applyTheme(savedTheme);
+    else {
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      applyTheme(prefersDark ? 'dark' : 'light');
+    }
+
+    if (themeToggles.length) {
+      themeToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          const currentlyDark = document.documentElement.getAttribute('data-theme') === 'dark';
+          const next = currentlyDark ? 'light' : 'dark';
+          applyTheme(next);
+          localStorage.setItem('theme', next);
+        });
+      });
+    }
   }
 
   // Initialize when DOM is ready
