@@ -7,35 +7,29 @@
   <meta name="description" content="Learn more about Rizwan Arshad - Software Engineering student passionate about web and mobile development">
   <meta name="keywords" content="about rizwan arshad, software engineer, web developer, flutter developer">
 
-  <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-
-  <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/header-enhanced.css" rel="stylesheet">
   <link href="assets/css/mobile-fixes.css" rel="stylesheet">
+  <link href="assets/css/mobile-nav.css" rel="stylesheet">
   <link href="assets/css/navbar-spacing-fix.css" rel="stylesheet">
+  <link href="assets/css/about-enhanced.css" rel="stylesheet">
 </head>
 
 <body class="about-page">
-  <!-- Scroll Progress Bar -->
   <div class="scroll-progress" id="scrollProgress"></div>
-  
-  <!-- Floating Orbs -->
+
   <div class="floating-orb floating-orb-1"></div>
   <div class="floating-orb floating-orb-2"></div>
   <div class="floating-orb floating-orb-3"></div>
-  
+
   <!-- Skeleton Preloader -->
   <div id="preloader">
     <div class="sk-nav">
@@ -65,7 +59,6 @@
     </div>
   </div>
 
-  <!-- Header -->
   <header class="header">
     <div class="container">
       <a href="index.html" class="logo">Rιȥɯαɳ</a>
@@ -85,12 +78,10 @@
         <a href="https://www.linkedin.com/in/c%D4%8B-r%CE%B9%C8%A5%C9%AF%CE%B1%C9%B3-a%C9%BE%CA%82%D4%8B%CE%B1%D4%83-0a024a366/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
       <button id="themeToggle" class="theme-toggle" aria-label="Toggle color theme">
-        <i class="bi bi-moon" aria-hidden="true"></i>
+        <i class="bi bi-brightness-high" aria-hidden="true"></i>
       </button>
-      <button class="mobile-nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation" type="button">
+        <i class="bi bi-list"></i>
       </button>
     </div>
   </header>
@@ -100,33 +91,39 @@
     <section class="section">
       <div class="container">
         <div class="section-title">
-          <h2>About Me</h2>
-          <p>Passionate Software Engineering student with a drive for innovation and excellence</p>
+          <h2 class="about-text-reveal">About Me</h2>
+          <p class="about-text-reveal-delay" data-typewriter>Passionate Software Engineering student with a drive for innovation and excellence</p>
         </div>
 
         <div class="about-section">
           <div class="row">
-            <div class="col-lg-4">
+            <!-- Profile Card -->
+            <div class="col-lg-4 about-profile-anim">
               <div class="profile-card">
                 <div class="profile-image">
                   <img src="assets/img/profile-img.jpg" alt="Rizwan Arshad Profile">
-                  <div class="status-badge">
-                    <i class="bi bi-check-circle"></i>
-                    <span>Available</span>
-                  </div>
                 </div>
                 <div class="profile-info">
                   <h3>Rizwan Arshad</h3>
                   <p class="title">Building Web Solutions & Network Systems</p>
-                  <div class="mb-3">
-                    <span class="badge" style="margin: 0.25rem;">Full-Stack Developer</span>
-                    <span class="badge" style="margin: 0.25rem; background: var(--gradient-secondary);">Mobile Developer</span>
-                    <span class="badge" style="margin: 0.25rem; background: var(--gradient-accent);">Network Engineer</span>
+
+                  <!-- Badges in one attractive pill row -->
+                  <div class="profile-badges">
+                    <span class="profile-badge badge-web">
+                      <i class="bi bi-code-slash"></i> Full-Stack
+                    </span>
+                    <span class="profile-badge badge-mobile">
+                      <i class="bi bi-phone"></i> Mobile
+                    </span>
+                    <span class="profile-badge badge-network">
+                      <i class="bi bi-diagram-3"></i> Networks
+                    </span>
                   </div>
+
                   <div class="contact-info">
                     <div class="contact-item">
                       <i class="bi bi-phone"></i>
-                    <p class="mb-0"><a href="tel:+923455933107" style="color: var(--primary-color);">+92 345 5933107</a></p>
+                      <p class="mb-0"><a href="tel:+923455933107" style="color: var(--primary-color);">+92 345 5933107</a></p>
                     </div>
                     <div class="contact-item">
                       <i class="bi bi-envelope"></i>
@@ -140,22 +137,20 @@
                 </div>
               </div>
             </div>
-            
-            <div class="col-lg-8">
+
+            <!-- About Content -->
+            <div class="col-lg-8 about-content-anim">
               <div class="about-content">
                 <h2>About Me</h2>
-                <p class="lead">
-                  I'm a dedicated Software Engineering student with a passion for creating digital solutions that make a difference. 
-                  I specialize in designing clean, user-friendly 
-                  interfaces and developing responsive websites that deliver exceptional user experiences.
-                </p>
-                
-                <div class="details-grid">
+                <p class="lead">I'm a dedicated Software Engineering student with a passion for creating digital solutions that make a difference. I specialize in designing clean, user-friendly interfaces and developing responsive websites that deliver exceptional user experiences.</p>
+
+                <!-- 4 detail items forced into one row -->
+                <div class="details-grid-row">
                   <div class="detail-item">
                     <i class="bi bi-mortarboard"></i>
                     <div>
                       <strong>Education</strong>
-                      <span>BS Software Engineering</span>
+                      <span>BS Software Eng.</span>
                     </div>
                   </div>
                   <div class="detail-item">
@@ -180,14 +175,14 @@
                     </div>
                   </div>
                 </div>
-                
+
                 <p>
                   My journey in software engineering started with a deep curiosity about how applications and networks
                   function together. I have developed skills in web development, Flutter, and networking fundamentals,
-                  with a focus on building secure and efficient systems. I am committed to continuous learning and 
+                  with a focus on building secure and efficient systems. I am committed to continuous learning and
                   staying updated with the latest industry trends.
                 </p>
-                
+
                 <div class="action-buttons">
                   <a href="resume.html" class="btn btn-primary">
                     <i class="bi bi-file-earmark-text"></i>
@@ -205,48 +200,45 @@
       </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Technical Skills Section -->
     <section class="section light-background">
       <div class="container">
         <div class="section-title">
-          <h2>Technical Skills</h2>
-          <p>Technologies and tools I use to build amazing digital experiences</p>
+          <h2 class="about-text-reveal">Technical Skills</h2>
+          <p class="about-text-reveal-delay" data-typewriter>Technologies and tools I use to build amazing digital experiences</p>
         </div>
 
         <div class="row">
           <div class="col-lg-6">
             <div class="skills">
-              <div class="progress">
+              <div class="progress about-skill-left">
                 <span class="skill">HTML/CSS <i class="val">95%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" style="width: 95%" aria-valuenow="95"></div>
                 </div>
               </div>
-
-              <div class="progress">
+              <div class="progress about-skill-left">
                 <span class="skill">JavaScript <i class="val">80%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" style="width: 80%" aria-valuenow="80"></div>
                 </div>
               </div>
-
-              <div class="progress">
+              <div class="progress about-skill-left">
                 <span class="skill">Flutter/Dart <i class="val">85%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" style="width: 85%" aria-valuenow="85"></div>
                 </div>
               </div>
-
-              <div class="progress">
+              <div class="progress about-skill-left">
                 <span class="skill">React.js <i class="val">70%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" style="width: 70%" aria-valuenow="70"></div>
                 </div>
               </div>
-              <div class="progress">
-                <span class="skill">Networking<i class="val">88%</i></span>
+              <div class="progress about-skill-left">
+                <span class="skill">Networking <i class="val">88%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" style="width: 70%" aria-valuenow="70"></div>
+                  <div class="progress-bar" style="width: 88%" aria-valuenow="88"></div>
                 </div>
               </div>
             </div>
@@ -254,28 +246,25 @@
 
           <div class="col-lg-6">
             <div class="skills">
-              <div class="progress">
+              <div class="progress about-skill-right">
                 <span class="skill">MySQL <i class="val">90%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" style="width: 90%" aria-valuenow="90"></div>
                 </div>
               </div>
-
-              <div class="progress">
+              <div class="progress about-skill-right">
                 <span class="skill">WordPress/CMS <i class="val">88%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" style="width: 88%" aria-valuenow="88"></div>
                 </div>
               </div>
-
-              <div class="progress">
+              <div class="progress about-skill-right">
                 <span class="skill">SEO Optimization <i class="val">75%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" style="width: 75%" aria-valuenow="75"></div>
                 </div>
               </div>
-
-              <div class="progress">
+              <div class="progress about-skill-right">
                 <span class="skill">UI/UX Design <i class="val">80%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" style="width: 80%" aria-valuenow="80"></div>
@@ -291,10 +280,9 @@
     <section class="section">
       <div class="container">
         <div class="section-title">
-          <h2>Achievements</h2>
-          <p>Numbers that reflect my journey and dedication</p>
+          <h2 class="about-text-reveal">Achievements</h2>
+          <p class="about-text-reveal-delay" data-typewriter>Numbers that reflect my journey and dedication</p>
         </div>
-
         <div class="stats">
           <div class="row">
             <div class="stats-item">
@@ -318,66 +306,58 @@
       </div>
     </section>
 
-    <!-- What I Do Section -->
+    <!-- What I Do Section — all 4 cards in one row -->
     <section class="section light-background">
       <div class="container">
         <div class="section-title">
-          <h2>What I Do</h2>
-          <p>Services and expertise I offer to bring your ideas to life</p>
+          <h2 class="about-text-reveal">What I Do</h2>
+          <p class="about-text-reveal-delay" data-typewriter>Services and expertise I offer to bring your ideas to life</p>
         </div>
 
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="card text-center">
-              <div class="mb-3">
-                <i class="bi bi-code-slash" style="font-size: 3rem; color: var(--primary-color);"></i>
-              </div>
-              <h4>Web Development</h4>
-              <p>Creating responsive, modern websites using the latest technologies and best practices for optimal performance and user experience.</p>
+        <div class="what-i-do-row">
+          <div class="what-card about-card-anim" data-delay="0">
+            <div class="what-card-icon" style="background: linear-gradient(135deg,rgba(99,102,241,.12),rgba(139,92,246,.12));">
+              <i class="bi bi-code-slash" style="color:var(--primary-color);"></i>
             </div>
+            <h4>Web Development</h4>
+            <p>Creating responsive, modern websites using the latest technologies and best practices for optimal performance.</p>
           </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div class="card text-center">
-              <div class="mb-3">
-                <i class="bi bi-phone" style="font-size: 3rem; color: var(--secondary-color);"></i>
-              </div>
-              <h4>Mobile App Development</h4>
-              <p>Building cross-platform mobile applications using Flutter, delivering native performance with a single codebase.</p>
+          <div class="what-card about-card-anim" data-delay="100">
+            <div class="what-card-icon" style="background: linear-gradient(135deg,rgba(139,92,246,.12),rgba(245,87,108,.12));">
+              <i class="bi bi-phone" style="color:var(--secondary-color);"></i>
             </div>
+            <h4>Mobile Development</h4>
+            <p>Building cross-platform mobile apps using Flutter, delivering native performance with a single codebase.</p>
           </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div class="card text-center">
-              <div class="mb-3">
-                <i class="bi bi-palette" style="font-size: 3rem; color: var(--accent-color);"></i>
-              </div>
-              <h4>UI/UX Design</h4>
-              <p>Designing intuitive and visually appealing user interfaces that provide excellent user experiences across all devices.</p>
+          <div class="what-card about-card-anim" data-delay="200">
+            <div class="what-card-icon" style="background: linear-gradient(135deg,rgba(6,182,212,.12),rgba(79,172,254,.12));">
+              <i class="bi bi-palette" style="color:var(--accent-color);"></i>
             </div>
+            <h4>UI/UX Design</h4>
+            <p>Designing intuitive and visually appealing interfaces that provide excellent experiences across all devices.</p>
           </div>
-           <div class="col-lg-4 col-md-6">
-  <div class="card text-center">
-    <div class="mb-3">
-      <i class="bi bi-diagram-3" style="font-size: 3rem; color: var(--accent-color);"></i>
-    </div>
-        <h4>Networking</h4>
-        <p>Building and managing scalable network infrastructures with a focus on security, performance, and seamless communication between systems.</p>
-        </div>
-        </div>
+
+          <div class="what-card about-card-anim" data-delay="300">
+            <div class="what-card-icon" style="background: linear-gradient(135deg,rgba(16,185,129,.12),rgba(67,233,123,.12));">
+              <i class="bi bi-diagram-3" style="color:var(--success-color);"></i>
+            </div>
+            <h4>Networking</h4>
+            <p>Building and managing scalable network infrastructures with a focus on security and seamless communication.</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="header-social-links">
-        <a href="https://twitter.com" class="twitter" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://facebook.com" class="facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://instagram.com" class="instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://linkedin.com/in/chaudhry-rizwan-arshad-0a024a366/" class="linkedin" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://twitter.com" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://facebook.com" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://instagram.com" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/c%D4%8B-r%CE%B9%C8%A5%C9%AF%CE%B1%C9%B3-a%C9%BE%CA%82%D4%8B%CE%B1%D4%83-0a024a366/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="copyright">
         <p>&copy; <strong>Rizwan Arshad</strong> - All Rights Reserved</p>
@@ -385,15 +365,12 @@
     </div>
   </footer>
 
-  <!-- Scroll Top Button -->
-  <a href="#" class="scroll-top">
-    <i class="bi bi-arrow-up-short"></i>
-  </a>
+  <a href="#" class="scroll-top"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Scripts -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/particles.js"></script>
   <script src="assets/js/header-particles.js"></script>
+  <script src="assets/js/about-animations.js"></script>
 </body>
 </html>

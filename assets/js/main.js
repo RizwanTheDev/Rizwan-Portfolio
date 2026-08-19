@@ -25,9 +25,14 @@
 
   // Mobile navigation toggle
   function toggleMobileNav() {
-    mobileToggle?.classList.toggle('active');
+    const isActive = mobileToggle?.classList.toggle('active');
     navMenu?.classList.toggle('active');
     document.body.classList.toggle('mobile-nav-active');
+    // Swap icon between list and X
+    if (mobileToggle) {
+      const icon = mobileToggle.querySelector('i');
+      if (icon) icon.className = isActive ? 'bi bi-x-lg' : 'bi bi-list';
+    }
   }
 
   // Close mobile nav when clicking on links
@@ -167,6 +172,53 @@
     }
   }
 
+  // Scroll-triggered animations via IntersectionObserver
+  function initScrollAnimations() {
+    const isMobile = window.innerWidth <= 1024;
+
+    // ── Progress bars fill on scroll ──
+    document.querySelectorAll('.progress-bar').forEach(bar => {
+      const target = bar.style.width;
+      bar.style.setProperty('--bar-width', target);
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          obs.unobserve(entry.target);
+          setTimeout(() => entry.target.classList.add('bar-animate'), 200);
+        });
+      }, { threshold: 0.3 });
+      obs.observe(bar);
+    });
+
+    // ── Typewriter on all [data-typewriter] paragraphs ──
+    document.querySelectorAll('[data-typewriter]').forEach(el => {
+      const html = el.innerHTML.trim();
+      const text = el.textContent.trim();
+      el.textContent = '';
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          obs.unobserve(entry.target);
+          let i = 0;
+          const tick = () => {
+            if (i < text.length) {
+              el.textContent = text.slice(0, ++i);
+              setTimeout(tick, 35);
+            } else {
+              el.innerHTML = html;
+            }
+          };
+          tick();
+        });
+      }, { threshold: 0.5 });
+      obs.observe(el);
+    });
+
+
+
+
+  }
+
   // Add smooth reveal animations
   function addRevealAnimations() {
     const reveals = document.querySelectorAll('.card, .stats-item, .resume-item');
@@ -245,8 +297,19 @@
       }, 10);
     }, { passive: true });
 
+    // Pin dropdown just below the header using a CSS variable
+    function syncNavTop() {
+      if (header) {
+        document.documentElement.style.setProperty('--nav-top', header.offsetHeight + 'px');
+      }
+    }
+    syncNavTop();
+    window.addEventListener('resize', syncNavTop);
+    window.addEventListener('scroll', syncNavTop, { passive: true });
+
     mobileToggle?.addEventListener('click', (e) => {
       e.stopPropagation();
+      syncNavTop();
       toggleMobileNav();
     });
     // Close mobile nav when clicking outside of it
@@ -274,6 +337,7 @@
 
     // Initialize animations
     addRevealAnimations();
+    initScrollAnimations();
     
     // Add social tooltips
     addSocialTooltips();
@@ -341,10 +405,10 @@
         const icon = toggle.querySelector('i');
         if (!icon) return;
         if (theme === 'dark') {
-          icon.className = 'bi bi-sun';
+          icon.className = 'bi bi-moon-stars';
           toggle.setAttribute('aria-label', 'Switch to light theme');
         } else {
-          icon.className = 'bi bi-moon';
+          icon.className = 'bi bi-brightness-high';
           toggle.setAttribute('aria-label', 'Switch to dark theme');
         }
       });

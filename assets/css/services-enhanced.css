@@ -1,0 +1,204 @@
+/* ========================================
+   SERVICES PAGE ENHANCED STYLES
+   ======================================== */
+
+/* ── Section spacing ── */
+.services-page .section {
+  padding: 2.5rem 0;
+}
+
+.services-page .section-title {
+  margin-bottom: 2rem;
+}
+
+.services-page .section-title h2 {
+  font-size: 2rem;
+}
+
+.services-page .section-title p {
+  font-size: 0.95rem;
+}
+
+/* ── Services grid — 3 columns tighter ── */
+.services-page .section:first-of-type .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem 0.85rem;
+  row-gap: 0.4rem;
+  margin: 0;
+}
+
+.services-page .section:first-of-type .col-lg-4,
+.services-page .section:first-of-type .col-md-6 {
+  flex: unset;
+  max-width: unset;
+  padding: 0;
+  margin: 0;
+}
+
+/* ── Service cards ── */
+.services-page .section:first-of-type .card {
+  padding: 0.9rem 0.9rem;
+  border-radius: 0.85rem;
+  box-shadow: 0 4px 16px rgba(15,23,42,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-page .section:first-of-type .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(99,102,241,0.15);
+}
+
+.services-page .section:first-of-type .card .mb-4 {
+  margin-bottom: 0.5rem !important;
+}
+
+.services-page .section:first-of-type .card i[style*="font-size: 4rem"] {
+  font-size: 1.8rem !important;
+}
+
+.services-page .section:first-of-type .card h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.services-page .section:first-of-type .card p {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem !important;
+}
+
+.services-page .section:first-of-type .card ul li {
+  font-size: 0.72rem;
+  padding: 0.12rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.services-page .section:first-of-type .card ul li i {
+  font-size: 0.72rem;
+  flex-shrink: 0;
+}
+
+/* ── Process section ── */
+.services-page .light-background .row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.85rem 0.85rem;
+  row-gap: 0.4rem;
+  margin: 0;
+}
+
+.services-page .light-background .col-lg-3,
+.services-page .light-background .col-md-6 {
+  flex: unset;
+  max-width: unset;
+  padding: 0;
+  margin: 0;
+}
+
+.services-page .light-background .card {
+  padding: 1.4rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 24px rgba(15,23,42,0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-page .light-background .card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.services-page .light-background .card:hover::after {
+  transform: scaleX(1);
+}
+
+.services-page .light-background .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 36px rgba(99,102,241,0.14);
+}
+
+.services-page .light-background .card .mb-3 {
+  margin-bottom: 0.75rem !important;
+}
+
+.services-page .light-background .card div[style*="width: 60px"] {
+  width: 46px !important;
+  height: 46px !important;
+  font-size: 1.1rem !important;
+}
+
+.services-page .light-background .card h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.services-page .light-background .card p {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── CTA section ── */
+.services-page .section:last-of-type {
+  padding: 2.5rem 0;
+  background: linear-gradient(135deg, rgba(99,102,241,0.06), rgba(139,92,246,0.06));
+  border-radius: 1.5rem;
+  margin: 0 1rem 2rem;
+}
+
+.services-page .section:last-of-type h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.services-page .section:last-of-type p {
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem !important;
+}
+
+.services-page .section:last-of-type .btn {
+  padding: 0.6rem 1.4rem !important;
+  font-size: 0.85rem !important;
+  min-height: 38px !important;
+}
+
+/* ── Dark mode ── */
+[data-theme='dark'] .services-page .section:first-of-type .card,
+html[data-theme='dark'] .services-page .section:first-of-type .card,
+[data-theme='dark'] .services-page .light-background .card,
+html[data-theme='dark'] .services-page .light-background .card {
+  background: rgba(255,255,255,0.04) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .services-page .section:first-of-type .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .services-page .light-background .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .services-page .section:first-of-type .row,
+  .services-page .light-background .row {
+    grid-template-columns: 1fr;
+  }
+  .services-page .section:last-of-type {
+    margin: 0 0 1.5rem;
+    border-radius: 0;
+  }
+}

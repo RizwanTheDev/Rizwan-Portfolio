@@ -24,6 +24,7 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/header-enhanced.css" rel="stylesheet">
   <link href="assets/css/mobile-fixes.css" rel="stylesheet">
+  <link href="assets/css/mobile-nav.css" rel="stylesheet">
   
   <!-- CV Admin System CSS -->
   <link href="assets/css/cv-admin-system.css" rel="stylesheet">
@@ -86,12 +87,10 @@
         <a href="https://www.linkedin.com/in/c%D4%8B-r%CE%B9%C8%A5%C9%AF%CE%B1%C9%B3-a%C9%BE%CA%82%D4%8B%CE%B1%D4%83-0a024a366/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
       <button id="themeToggle" class="theme-toggle" aria-label="Toggle color theme">
-        <i class="bi bi-moon" aria-hidden="true"></i>
+        <i class="bi bi-brightness-high" aria-hidden="true"></i>
       </button>
-      <button class="mobile-nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation" type="button">
+        <i class="bi bi-list"></i>
       </button>
     </div>
   </header>
@@ -100,14 +99,14 @@
     <!-- Resume Section -->
     <section class="section">
       <div class="container">
-        <div class="section-title">
+        <div class="section-title" style="margin-bottom:1.5rem">
           <h2>Resume</h2>
-          <p>My professional journey, education, and experience</p>
+          <p><span id="resume-tw"></span></p>
         </div>
 
         <!-- Download CV Button -->
-        <div class="text-center mb-5">
-          <button class="btn btn-primary btn-lg" data-cv-download>
+        <div class="text-center mb-1">
+          <button class="btn btn-primary" style="padding:0.5rem 1.25rem;font-size:0.875rem;min-height:36px;" data-cv-download>
             <i class="bi bi-download"></i>
             Download My CV
           </button>
@@ -284,7 +283,7 @@
             <h3>Ready to Work Together?</h3>
             <p>I'm always open to discussing new opportunities and exciting projects. Let's connect and see how we can collaborate!</p>
             <div class="d-flex justify-content-center">
-              <a href="contact.html" class="btn btn-primary">
+              <a href="contact.html" class="btn btn-primary" style="padding:0.5rem 1.25rem;font-size:0.875rem;min-height:36px;">
                 <i class="bi bi-envelope"></i>
                 Contact Me
               </a>
@@ -323,5 +322,15 @@
   <script src="assets/js/cv-admin-system.js"></script>
   <script src="assets/js/particles.js"></script>
   <script src="assets/js/header-particles.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var el = document.getElementById('resume-tw');
+  var text = 'My professional journey, education, and experience.';
+  var i = 0;
+  el.textContent = '';
+  function tick() { if (i < text.length) { el.textContent += text[i++]; setTimeout(tick, 48); } }
+  tick();
+});
+</script>
 </body>
 </html>

@@ -1,0 +1,201 @@
+/* ============================================
+   MOBILE NAVIGATION — Full-width dropdown
+   All items visible at once, no scrolling
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  /* ── Full-width dropdown panel ── */
+  .navmenu ul {
+    position: fixed !important;
+    top: var(--nav-top, 64px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+
+    padding: 0.6rem 1rem 1rem !important;
+    gap: 0.3rem !important;
+    margin: 0 !important;
+
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.15) !important;
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.14) !important;
+
+    /* Hidden state — slides up */
+    transform: translateY(-8px) !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s ease,
+                visibility 0.3s !important;
+    z-index: 1050 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ── Open state ── */
+  .navmenu ul.active {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  /* ── Backdrop ── */
+  body.mobile-nav-active::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.35);
+    z-index: 1040;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    animation: navOverlayIn 0.25s ease forwards;
+  }
+
+  @keyframes navOverlayIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  /* ── Nav items — staggered drop-in ── */
+  .navmenu ul li {
+    margin: 0 !important;
+    width: 100% !important;
+    list-style: none !important;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: opacity 0.22s ease, transform 0.22s ease;
+  }
+
+  .navmenu ul.active li { opacity: 1 !important; transform: translateY(0) !important; }
+  .navmenu ul.active li:nth-child(1) { transition-delay: 0.04s; }
+  .navmenu ul.active li:nth-child(2) { transition-delay: 0.09s; }
+  .navmenu ul.active li:nth-child(3) { transition-delay: 0.14s; }
+  .navmenu ul.active li:nth-child(4) { transition-delay: 0.19s; }
+  .navmenu ul.active li:nth-child(5) { transition-delay: 0.24s; }
+
+  /* ── Nav links ── */
+  .navmenu ul li a {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    width: 100% !important;
+    padding: 0.8rem 1rem !important;
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+    color: #374151 !important;
+    border-radius: 10px !important;
+    text-decoration: none !important;
+    transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease !important;
+    position: relative !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  /* Icon dot indicator */
+  .navmenu ul li a::before {
+    content: '' !important;
+    display: inline-block !important;
+    width: 6px !important;
+    height: 6px !important;
+    border-radius: 50% !important;
+    background: #d1d5db !important;
+    flex-shrink: 0 !important;
+    transition: background 0.18s ease, transform 0.18s ease !important;
+  }
+
+  /* Remove desktop underline */
+  .navmenu ul li a::after {
+    display: none !important;
+  }
+
+  /* Hover */
+  .navmenu ul li a:hover {
+    background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(139,92,246,0.06)) !important;
+    color: #6366f1 !important;
+    transform: translateX(3px) !important;
+  }
+  .navmenu ul li a:hover::before {
+    background: #6366f1 !important;
+    transform: scale(1.4) !important;
+  }
+
+  /* Active page */
+  .navmenu ul li a.active {
+    background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(139,92,246,0.08)) !important;
+    color: #6366f1 !important;
+    font-weight: 700 !important;
+  }
+  .navmenu ul li a.active::before {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+    width: 8px !important;
+    height: 8px !important;
+    box-shadow: 0 0 6px rgba(99,102,241,0.5) !important;
+  }
+
+  /* Divider */
+  .navmenu ul li + li {
+    border-top: 1px solid rgba(226, 232, 240, 0.6) !important;
+  }
+}
+
+/* ── Dark mode ── */
+@media (max-width: 768px) {
+  html[data-theme='dark'] .navmenu ul,
+  [data-theme='dark'] .navmenu ul {
+    background: rgba(10, 15, 35, 0.98) !important;
+    border-bottom-color: rgba(124, 58, 237, 0.2) !important;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  html[data-theme='dark'] .navmenu ul li a,
+  [data-theme='dark'] .navmenu ul li a {
+    color: #cbd5e1 !important;
+  }
+  html[data-theme='dark'] .navmenu ul li a::before,
+  [data-theme='dark'] .navmenu ul li a::before {
+    background: #4b5563 !important;
+  }
+
+  html[data-theme='dark'] .navmenu ul li a:hover,
+  [data-theme='dark'] .navmenu ul li a:hover {
+    background: rgba(255,255,255,0.05) !important;
+    color: #a78bfa !important;
+  }
+  html[data-theme='dark'] .navmenu ul li a:hover::before,
+  [data-theme='dark'] .navmenu ul li a:hover::before {
+    background: #a78bfa !important;
+  }
+
+  html[data-theme='dark'] .navmenu ul li a.active,
+  [data-theme='dark'] .navmenu ul li a.active {
+    background: rgba(124,58,237,0.15) !important;
+    color: #a78bfa !important;
+  }
+  html[data-theme='dark'] .navmenu ul li a.active::before,
+  [data-theme='dark'] .navmenu ul li a.active::before {
+    background: linear-gradient(135deg, #7c3aed, #a78bfa) !important;
+    box-shadow: 0 0 6px rgba(124,58,237,0.6) !important;
+  }
+
+  html[data-theme='dark'] .navmenu ul li + li,
+  [data-theme='dark'] .navmenu ul li + li {
+    border-top-color: rgba(255,255,255,0.06) !important;
+  }
+
+  html[data-theme='dark'] body.mobile-nav-active::after,
+  [data-theme='dark'] body.mobile-nav-active::after {
+    background: rgba(0,0,0,0.6) !important;
+  }
+}

@@ -1,0 +1,77 @@
+/* ============================================
+   SCROLL-TRIGGERED ANIMATIONS
+   Animations fire only when element enters viewport
+   ============================================ */
+
+/* --- Hero-style text reveal (clip + slide up) for subtitle only --- */
+.text-reveal {
+  display: inline-block;
+}
+.text-reveal-delay {
+  display: inline-block;
+}
+
+/* --- CTA section --- */
+.cta-title-anim {
+  display: inline-block;
+}
+.cta-sub-anim {
+  display: inline-block;
+}
+.cta-btns-anim {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s;
+}
+.cta-btns-anim.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 1024px) {
+  .text-reveal-delay,
+  .cta-sub-anim, .cta-btns-anim {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* --- Progress bar fill animation --- */
+.progress-bar {
+  width: 0 !important;
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.progress-bar.bar-animate {
+  width: var(--bar-width) !important;
+}
+
+.sa-item {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sa-item[data-anim="slide-left"] {
+  transform: translateX(-40px);
+}
+
+.sa-item[data-anim="slide-right"] {
+  transform: translateX(40px);
+}
+
+/* --- Visible state (added by JS) --- */
+.sa-item.is-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* --- Disable on mobile/tablet (≤1024px) --- */
+@media (max-width: 1024px) {
+  .sa-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

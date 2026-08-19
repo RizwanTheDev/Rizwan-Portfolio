@@ -24,6 +24,7 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/header-enhanced.css" rel="stylesheet">
   <link href="assets/css/mobile-fixes.css" rel="stylesheet">
+  <link href="assets/css/mobile-nav.css" rel="stylesheet">
 </head>
 
 <body class="contact-page">
@@ -83,28 +84,43 @@
         <a href="https://www.linkedin.com/in/c%D4%8B-r%CE%B9%C8%A5%C9%AF%CE%B1%C9%B3-a%C9%BE%CA%82%D4%8B%CE%B1%D4%83-0a024a366/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
       <button id="themeToggle" class="theme-toggle" aria-label="Toggle color theme">
-        <i class="bi bi-moon" aria-hidden="true"></i>
+        <i class="bi bi-brightness-high" aria-hidden="true"></i>
       </button>
-      <button class="mobile-nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation" type="button">
+        <i class="bi bi-list"></i>
       </button>
     </div>
   </header>
 
   <main>
+    <!-- Contact Hero Banner -->
+    <section class="contact-hero">
+      <div class="contact-hero-orb contact-hero-orb-1"></div>
+      <div class="contact-hero-orb contact-hero-orb-2"></div>
+      <div class="container">
+        <div class="contact-hero-inner">
+          <h1>Get In Touch</h1>
+          <p id="hero-tw"></p>
+          <div class="contact-hero-stats">
+            <div class="ch-stat"><i class="bi bi-clock"></i><span>24h Response</span></div>
+            <div class="ch-stat"><i class="bi bi-shield-check"></i><span>100% Confidential</span></div>
+            <div class="ch-stat"><i class="bi bi-star"></i><span>5-Star Service</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="section">
       <div class="container">
         <div class="section-title">
           <h2>Contact Me</h2>
-          <p>Let's discuss your project and bring your ideas to life</p>
+          <p><span id="contact-tw"></span></p>
         </div>
 
-        <div class="row">
+        <div class="row contact-cards-row">
           <!-- Contact Info -->
-          <div class="col-lg-5">
+          <div class="col-lg-6">
             <div class="card">
               <h3 class="mb-4">Get In Touch</h3>
               <p class="mb-4">I'm always excited to work on new projects and collaborate with amazing people. Whether you have a question, want to discuss a project, or just want to say hello, feel free to reach out!</p>
@@ -168,7 +184,7 @@
           </div>
 
           <!-- Contact Form -->
-          <div class="col-lg-7">
+          <div class="col-lg-6">
             <div class="card">
               <h3 class="mb-4">Send Me a Message</h3>
               <div id="form-success" style="display:none;text-align:center;padding:40px 20px;">
@@ -234,47 +250,44 @@
       <div class="container">
         <div class="section-title">
           <h2>Frequently Asked Questions</h2>
-          <p>Common questions about my services and process</p>
+          <p style="text-align:center;"><span id="faq-tw"></span></p>
         </div>
 
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <div class="faq-container">
-              <div class="faq-item">
-                <div class="card">
-                  <h4>What is your typical project timeline?</h4>
-                  <p>Project timelines vary depending on complexity. A simple website typically takes 1-2 weeks, while complex web applications or mobile apps can take 4-8 weeks. I'll provide a detailed timeline during our initial consultation.</p>
-                </div>
-              </div>
+        <div class="faq-grid">
+          <div class="faq-card">
+            <div class="faq-icon"><i class="bi bi-calendar-check"></i></div>
+            <h4>What is your typical project timeline?</h4>
+            <p>Project timelines vary depending on complexity. A simple website typically takes 1-2 weeks, while complex web applications or mobile apps can take 4-8 weeks. I'll provide a detailed timeline during our initial consultation.</p>
+          </div>
 
-              <div class="faq-item">
-                <div class="card">
-                  <h4>Do you provide ongoing support after project completion?</h4>
-                  <p>Yes! I offer ongoing maintenance and support services to keep your website or app running smoothly. This includes updates, security monitoring, and technical support as needed.</p>
-                </div>
-              </div>
+          <div class="faq-card">
+            <div class="faq-icon"><i class="bi bi-headset"></i></div>
+            <h4>Do you provide ongoing support after project completion?</h4>
+            <p>Yes! I offer ongoing maintenance and support services to keep your website or app running smoothly. This includes updates, security monitoring, and technical support as needed.</p>
+          </div>
 
-              <div class="faq-item">
-                <div class="card">
-                  <h4>What technologies do you specialize in?</h4>
-                  <p>I specialize in modern web technologies (HTML5, CSS3, JavaScript), Flutter for mobile development, WordPress for CMS solutions, and MySQL for databases. I stay updated with the latest industry trends and technologies.</p>
-                </div>
-              </div>
+          <div class="faq-card">
+            <div class="faq-icon"><i class="bi bi-code-slash"></i></div>
+            <h4>What technologies do you specialize in?</h4>
+            <p>I specialize in modern web technologies (HTML5, CSS3, JavaScript), Flutter for mobile development, WordPress for CMS solutions, and MySQL for databases. I stay updated with the latest industry trends.</p>
+          </div>
 
-              <div class="faq-item">
-                <div class="card">
-                  <h4>Can you help with existing projects or only new ones?</h4>
-                  <p>I can work on both new projects and existing ones. Whether you need to add features, fix issues, redesign, or optimize performance, I'm happy to help improve your current digital solutions.</p>
-                </div>
-              </div>
+          <div class="faq-card">
+            <div class="faq-icon"><i class="bi bi-tools"></i></div>
+            <h4>Can you help with existing projects or only new ones?</h4>
+            <p>I can work on both new projects and existing ones. Whether you need to add features, fix issues, redesign, or optimize performance, I'm happy to help improve your current digital solutions.</p>
+          </div>
 
-              <div class="faq-item">
-                <div class="card">
-                  <h4>What information do you need to start a project?</h4>
-                  <p>I'll need details about your project goals, target audience, preferred features, design preferences, timeline, and budget. The more information you provide, the better I can tailor the solution to your needs.</p>
-                </div>
-              </div>
-            </div>
+          <div class="faq-card">
+            <div class="faq-icon"><i class="bi bi-clipboard-data"></i></div>
+            <h4>What information do you need to start a project?</h4>
+            <p>I'll need details about your project goals, target audience, preferred features, design preferences, timeline, and budget. The more information you provide, the better I can tailor the solution.</p>
+          </div>
+
+          <div class="faq-card faq-card-cta">
+            <div class="faq-icon"><i class="bi bi-envelope-heart"></i></div>
+            <h4>Still have questions?</h4>
+            <p>Don't hesitate to reach out directly. I'm always happy to answer any questions you might have about working together.</p>
           </div>
         </div>
       </div>
@@ -308,156 +321,285 @@
   <script src="assets/js/header-particles.js"></script>
 
   <style>
-    .form-control {
-      width: 100%;
-      padding: 14px 16px;
-      border: 2px solid #e5e7eb;
-      border-radius: 12px;
-      font-size: 15px;
-      transition: all 0.3s ease;
-      background: white;
-      font-family: inherit;
+    /* ── Contact Hero ── */
+    .contact-hero {
+      position: relative;
+      background: linear-gradient(135deg, rgba(102,126,234,0.92) 0%, rgba(118,75,162,0.92) 100%), url('assets/img/hero-bg.jpg') center/cover no-repeat;
+      padding: 5rem 0 4rem;
+      overflow: hidden;
+      text-align: center;
+      color: white;
+    }
+    .contact-hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.25;
+      pointer-events: none;
+    }
+    .contact-hero-orb-1 { width:320px;height:320px;background:linear-gradient(135deg,#f093fb,#f5576c);top:-80px;right:-60px; }
+    .contact-hero-orb-2 { width:260px;height:260px;background:linear-gradient(135deg,#4facfe,#00f2fe);bottom:-60px;left:-40px; }
+    .contact-hero-inner { position:relative;z-index:2;max-width:680px;margin:0 auto; }
+    .contact-hero h1 {
+      font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;
+      color:white;margin-bottom:1rem;letter-spacing:-0.02em;
+    }
+    .contact-hero p {
+      font-size:1.1rem;color:rgba(255,255,255,0.9);
+      line-height:1.8;margin-bottom:2rem;
+    }
+    .contact-hero-stats {
+      display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;
+    }
+    .ch-stat {
+      display:flex;align-items:center;gap:0.5rem;
+      background:rgba(255,255,255,0.15);backdrop-filter:blur(8px);
+      border:1px solid rgba(255,255,255,0.25);border-radius:999px;
+      padding:0.5rem 1.2rem;font-size:0.9rem;font-weight:600;color:white;
+    }
+    .ch-stat i { font-size:1rem; }
+
+    /* ── Equal contact cards row ── */
+    .contact-cards-row {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      align-items: stretch !important;
+      gap: 1.5rem !important;
+      margin: 0 !important;
+    }
+    .contact-cards-row > .col-lg-6 {
+      flex: 1 1 0 !important;
+      max-width: calc(50% - 0.75rem) !important;
+      display: flex;
+      flex-direction: column;
+      padding: 0 !important;
+    }
+    .contact-cards-row > .col-lg-6:first-child > .card {
+      display: flex !important;
+      flex-direction: column !important;
+    }
+    @media (max-width: 768px) {
+      .contact-cards-row {
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+      }
+      .contact-cards-row > .col-lg-6 {
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+      }
     }
 
+    /* ── Form inner name/email row ── */
+    .contact-form .row {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: wrap !important;
+      gap: 0 !important;
+      margin: 0 -0.5rem !important;
+    }
+    .contact-form .row .col-md-6 {
+      flex: 0 0 50% !important;
+      max-width: 50% !important;
+      padding: 0 0.5rem !important;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 600px) {
+      .contact-form .row .col-md-6 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+      }
+    }
+
+    /* ── FAQ Grid ── */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .faq-card {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      border: 1px solid rgba(148,163,184,0.15);
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .faq-card::before {
+      content:'';
+      position:absolute;top:0;left:0;right:0;height:3px;
+      background:var(--gradient-primary);
+      transform:scaleX(0);transition:transform 0.35s ease;
+    }
+    .faq-card:hover::before { transform:scaleX(1); }
+    .faq-card:hover {
+      transform:translateY(-6px);
+      box-shadow:0 16px 40px rgba(99,102,241,0.15);
+      border-color:rgba(99,102,241,0.25);
+    }
+    .faq-icon {
+      width:56px;height:56px;
+      background:linear-gradient(135deg,rgba(99,102,241,0.12),rgba(139,92,246,0.12));
+      border-radius:14px;
+      display:flex;align-items:center;justify-content:center;
+      margin:0 auto 1.1rem;
+      transition:all 0.35s ease;
+    }
+    .faq-card:hover .faq-icon {
+      background:var(--gradient-primary);
+    }
+    .faq-icon i {
+      font-size:1.4rem;
+      color:var(--primary-color);
+      transition:color 0.35s ease;
+    }
+    .faq-card:hover .faq-icon i { color:white; }
+    .faq-card h4 {
+      font-size:1rem;font-weight:700;
+      color:#1f2937;margin-bottom:0.75rem;
+    }
+    .faq-card p {
+      font-size:0.92rem;color:#6b7280;
+      line-height:1.7;margin:0;
+    }
+    .faq-card-cta {
+      background:linear-gradient(135deg,rgba(99,102,241,0.06),rgba(139,92,246,0.06));
+      border-color:rgba(99,102,241,0.2);
+    }
+    @media(max-width:1024px){
+      .faq-grid { grid-template-columns:repeat(2,1fr); }
+    }
+    @media(max-width:640px){
+      .faq-grid { grid-template-columns:1fr; }
+      .contact-hero { padding:4rem 0 3rem; }
+      .contact-hero-stats { gap:0.75rem; }
+      .ch-stat { font-size:0.8rem;padding:0.4rem 0.9rem; }
+      .contact-cards-row { flex-direction:column; }
+    }
+    /* Dark mode FAQ */
+    [data-theme='dark'] .faq-card,
+    html[data-theme='dark'] .faq-card {
+      background:rgba(255,255,255,0.04)!important;
+      border-color:rgba(255,255,255,0.08)!important;
+    }
+    [data-theme='dark'] .faq-card h4,
+    html[data-theme='dark'] .faq-card h4 { color:var(--text-primary)!important; }
+    [data-theme='dark'] .faq-card p,
+    html[data-theme='dark'] .faq-card p { color:var(--text-secondary)!important; }
+    [data-theme='dark'] .faq-icon,
+    html[data-theme='dark'] .faq-icon { background:rgba(255,255,255,0.06)!important; }
+    [data-theme='dark'] .faq-card-cta,
+    html[data-theme='dark'] .faq-card-cta { background:rgba(99,102,241,0.08)!important; }
+
+    /* ── Card padding & text position ── */
+    .contact-cards-row > .col-lg-6 > .card {
+      padding: 1.8rem 2rem 2rem !important;
+    }
+    /* ── Card typography ── */
+    .contact-cards-row .card h3 { font-size: 1.25rem !important; font-weight: 700; margin-bottom: 0.6rem !important; }
+    .contact-cards-row .card > p.mb-4 { font-size: 0.9rem !important; line-height: 1.65; margin-bottom: 1rem !important; }
+    .contact-cards-row .card h5 { font-size: 0.88rem !important; font-weight: 600; margin-bottom: 0.2rem !important; }
+    .contact-cards-row .card .contact-info p { font-size: 0.84rem !important; margin: 0 !important; }
+    .contact-cards-row .card .contact-info > div { margin-bottom: 0.75rem !important; }
+    .contact-cards-row .card .contact-info > div > div:first-child {
+      width: 40px !important; height: 40px !important; min-width: 40px;
+      margin-right: 0.75rem !important;
+    }
+    .contact-cards-row .card .contact-info > div > div:first-child i { font-size: 1rem !important; }
+    .contact-cards-row .card h3.mb-4 { margin-bottom: 0.6rem !important; }
+
+    /* ── Social / follow buttons ── */
+    .social-links-contact {
+      text-align: center;
+      margin-top: auto;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(148,163,184,0.15);
+    }
+    .social-links-contact h5 { font-size: 0.9rem !important; margin-bottom: 0.6rem !important; }
+    .social-links-contact .d-flex { justify-content: center !important; gap: 0.65rem !important; }
+    .social-links-contact .btn {
+      padding: 7px 20px !important;
+      font-size: 0.84rem !important;
+      font-weight: 600;
+      border-radius: 20px !important;
+      min-height: unset !important;
+      line-height: 1.6;
+      display: inline-flex !important;
+      align-items: center;
+      gap: 0.4rem !important;
+      transition: all 0.25s ease;
+    }
+    .social-links-contact .btn i { font-size: 0.86rem !important; }
+    .social-links-contact .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 14px rgba(99,102,241,0.35);
+    }
+
+    /* ── Form controls ── */
+    .form-control {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 10px;
+      font-size: 13px;
+      transition: all 0.3s ease;
+      background: #f9fafb;
+      font-family: inherit;
+      box-sizing: border-box;
+    }
     .form-control:focus {
       outline: none;
       border-color: #6366f1;
-      box-shadow: 0 0 0 4px rgba(99,102,241,0.1);
-      transform: translateY(-2px);
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+      transform: translateY(-1px);
     }
-
     .form-label {
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 5px;
       font-weight: 600;
       color: #1f2937;
-      font-size: 14px;
+      font-size: 12px;
     }
+    .contact-form { max-width: 100%; }
+    .contact-form .mb-3 { margin-bottom: 0.65rem !important; }
+    .contact-form .mb-4 { margin-bottom: 0.85rem !important; }
+    .contact-cards-row .card h3.mb-4 { margin-bottom: 0.75rem !important; }
 
-    .contact-form {
-      max-width: 100%;
-    }
-
-    .card {
-      background: white;
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: all 0.3s ease;
-    }
-
-    .faq-item {
-      margin-bottom: 1rem;
-    }
-
-    .faq-item .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(99,102,241,0.15);
-    }
-
-    .social-links-contact .btn {
-      padding: 12px 20px;
-      font-size: 15px;
-      font-weight: 600;
-      border-radius: 12px;
-      transition: all 0.3s ease;
-    }
-
-    .social-links-contact .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(99,102,241,0.3);
-    }
-
-    #form-success {
-      padding: 40px 24px;
-      animation: successSlideIn 0.5s ease;
-    }
-
-    @keyframes successSlideIn {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
+    /* ── Submit button ── */
     #submit-btn {
-      padding: 14px 28px;
-      font-size: 15px;
+      padding: 9px 20px !important;
+      font-size: 13px !important;
       font-weight: 600;
-      border-radius: 12px;
+      border-radius: 10px;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(99,102,241,0.3);
+      box-shadow: 0 3px 10px rgba(99,102,241,0.25);
+      min-height: unset !important;
     }
-
     #submit-btn:hover:not(:disabled) {
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(99,102,241,0.4);
+      box-shadow: 0 6px 16px rgba(99,102,241,0.35);
+    }
+
+    /* ── Success state ── */
+    #form-success { padding: 24px 16px; animation: successSlideIn 0.5s ease; }
+    @keyframes successSlideIn {
+      from { opacity:0; transform:scale(0.9); }
+      to   { opacity:1; transform:scale(1); }
     }
 
     @media (max-width: 768px) {
-      .card {
-        padding: 24px 20px;
-        border-radius: 12px;
-      }
-
-      .form-control {
-        padding: 12px 14px;
-        font-size: 14px;
-      }
-
-      .d-flex.gap-2 {
-        flex-direction: column;
-        gap: 12px !important;
-      }
-      
-      .social-links-contact .btn {
-        width: 100%;
-        justify-content: center;
-      }
-
-      #submit-btn {
-        width: 100%;
-        padding: 16px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .card {
-        padding: 20px 16px;
-      }
-
-      .form-control {
-        padding: 12px;
-        font-size: 14px;
-      }
+      .contact-cards-row .card { padding: 20px 16px !important; }
+      .form-control { padding: 10px 12px; font-size: 14px; }
+      .social-links-contact .btn { width: 100%; justify-content: center; }
+      #submit-btn { width: 100% !important; }
     }
   </style>
 
-<style>
-.form-control{width:100%;padding:14px 16px;border:2px solid #e5e7eb;border-radius:12px;font-size:15px;transition:all .3s ease;background:#f9fafb;font-family:'Inter',sans-serif;box-sizing:border-box}
-.form-control:focus{outline:none;border-color:#6366f1;background:#fff;box-shadow:0 0 0 4px rgba(99,102,241,.1);transform:translateY(-1px)}
-.form-label{display:block;margin-bottom:8px;font-weight:600;color:#1f2937;font-size:14px}
-.contact-form{max-width:100%}
-.contact-form .btn-primary{padding:14px 28px;font-size:15px;font-weight:600;border-radius:12px;box-shadow:0 4px 15px rgba(99,102,241,.3);transition:all .3s ease}
-.contact-form .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(99,102,241,.4)}
-.faq-item{margin-bottom:1rem}
-.social-links-contact .btn{padding:12px 20px;font-size:15px;font-weight:600;border-radius:12px}
-#form-success{animation:successFadeIn .5s ease}
-@keyframes successFadeIn{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
-@media(max-width:768px){
-.contact-form .row .col-md-6{margin-bottom:16px}
-.form-control{font-size:16px;padding:16px}
-.form-label{font-size:15px}
-.contact-form .btn-primary{width:100%;padding:16px;font-size:16px}
-.d-flex.gap-2{flex-direction:column;gap:12px!important}
-.social-links-contact .btn{width:100%;padding:14px;margin-bottom:0}
-.card{padding:20px!important}
-.contact-info .d-flex{flex-direction:row;align-items:flex-start}
-.contact-info .d-flex>div:first-child{flex-shrink:0}
-}
-@media(max-width:480px){
-.form-control{padding:14px}
-.contact-form .btn-primary{padding:14px}
-}
-</style>
 
 <script>
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwf1IvkAaGKHv6h1AwYEsywzi6WbsXFvdr4OPyD0Zdt5X_wOgpxBJV_rOqpPTYnyzOjlA/exec';
@@ -500,6 +642,23 @@ function resetForm() {
   document.getElementById('submit-btn').disabled = false;
   document.getElementById('submit-btn').innerHTML = '<i class="bi bi-send"></i> Send Message';
 }
+</script>
+
+<script>
+function typewriter(el, text, speed) {
+  speed = speed || 45;
+  var i = 0;
+  el.textContent = '';
+  function tick() {
+    if (i < text.length) { el.textContent += text[i++]; setTimeout(tick, speed); }
+  }
+  tick();
+}
+document.addEventListener('DOMContentLoaded', function() {
+  typewriter(document.getElementById('hero-tw'),    "Have a project in mind? I'd love to hear about it. Let's create something amazing together.", 40);
+  typewriter(document.getElementById('contact-tw'), "Let's discuss your project and bring your ideas to life.", 50);
+  typewriter(document.getElementById('faq-tw'),     "Common questions about my services and process.", 50);
+});
 </script>
 
 </body>

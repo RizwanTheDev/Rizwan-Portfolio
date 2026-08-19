@@ -514,3 +514,28 @@ html[data-theme='dark'] .text-center .btn-primary {
   color: #fff !important;
 }
 
+/* ============================================
+   DARK MODE — Stats section text fix
+   ============================================ */
+html[data-theme='dark'] .stats-item,
+[data-theme='dark'] .stats-item {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme='dark'] .stats-item p,
+[data-theme='dark'] .stats-item p {
+  color: #cbd5e1 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+html[data-theme='dark'] .stats-item span,
+[data-theme='dark'] .stats-item span {
+  background: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
